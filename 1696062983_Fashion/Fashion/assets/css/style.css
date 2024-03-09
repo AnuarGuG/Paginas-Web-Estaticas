@@ -1,0 +1,817 @@
+/*
+[Master Stylesheet] 
+Project: Fashion Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Philosopher:wght@400;700&display=swap');
+
+:root {
+    --fas-primary-color:#f96e89;
+    --fas-secoundry-color: #fff9f5;
+    --fas-white-color: #ffffff;
+    --fas-font-color: #222222;
+    --fas-font-light: #4c4c4c;
+    --fas-transition: all 0.3s;
+    --fas-box-shadow: 0 7px 21px rgba(0,0,0,.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--fas-font-color);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: var(--fas-font-color);
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--fas-primary-color);
+    width: 4px;
+}
+
+a, a:hover, a:focus, button, button:hover, button:focus{	
+	text-decoration: none;
+	-webkit-transition: var(--fas-transition);
+    -moz-transition: var(--fas-transition);
+    -ms-transition: var(--fas-transition);
+    -o-transition: var(--fas-transition);
+    transition: var(--fas-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--fas-transition);
+    -moz-transition: var(--fas-transition);
+    -ms-transition: var(--fas-transition);
+    -o-transition: var(--fas-transition);
+    transition: var(--fas-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    font-family: 'Philosopher', sans-serif;
+    text-transform: capitalize;
+}
+h5 {
+    font-size: 30px;
+    font-weight: 400;
+}
+h4{
+    font-size: 20px;
+    font-weight: 400;
+}
+h3{
+    font-size: 50px;
+    font-weight: 400;
+}
+h2{
+    font-size: 60px;
+    font-weight: 400;
+}
+
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 70px 0;
+}
+
+.row{
+    row-gap: 24px;
+}
+
+.fas_section_heading {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 15px;
+}
+
+.fas_section_heading h1{
+    font-size: 50px;
+    color: var(--fas-primary-color);
+}
+
+.fas_bottom_btn a {
+    margin: 15px auto 0;
+}
+
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.fas-top-icon a {
+    display: flex;
+    background-color: var(--fas-primary-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--fas-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 1000;
+    animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+
+.fas-top-icon a:active {
+  background-color: var(--fas-font-light);
+}
+.fas-top-icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fas-white-color);
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Button Style
+ *******************************************************/
+
+.fas_btn {
+    background-color: var(--fas-primary-color);
+    color: var(--fas-white-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 10px;
+    min-height: 50px;
+    min-width: 125px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas_btn:hover{
+    background-color: var(--fas-font-color) !important;
+    color: var(--fas-white-color) !important;
+}
+
+/********************************************************
+    Header Section Style
+ *******************************************************/
+
+.pp-header-wrapper {
+    background-color: var(--fas-white-color);
+    height: 100px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-bottom: 1px solid rgb(34 34 34 / 10%);
+    transition: .5s cubic-bezier(.25,.8,.25,1) 0.05s;
+}
+
+.pp-header-wrapper.pp-header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: goDown 0.5s ease-in-out forwards;
+}
+
+@keyframes goDown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fas_header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.fas_logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.fas_logo a {
+    background-color: var(--fas-white-color);
+    padding: 12px 10px 12px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--fas-box-shadow);
+    margin-bottom: -50px;
+    height: 150px;
+}
+
+.pp-header-wrapper.pp-header-fixed .fas_logo a {
+    width: auto;
+    height: auto;
+    margin: 0;
+    box-shadow: none;
+    background-color: transparent;
+}
+
+.fas_logo a img {
+    object-position: left;
+}
+
+.fas_toggle_menu {
+    display: none; 
+    cursor: pointer;
+}
+
+.fas_menu {
+    display: flex;
+    gap: 70px;
+}
+
+.fas_menu li a {
+    transition: var(--fas-transition);
+    color: var(--fas-font-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.fas_menu li a:hover {
+    color: var(--fas-primary-color);
+}
+
+.fas_body_overlay{
+    position: fixed;
+    background: rgb(0 0 0 / 40%);
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    cursor: zoom-in;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.menu-open .fas_body_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    Banner Section Style
+ *******************************************************/
+
+.fas_banner_slide1,
+.fas_banner_slide2,
+.fas_banner_slide3{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fas_banner_slide1{
+    background-image: url(../images/banner-1.jpg);
+}
+
+.fas_banner_slide2{
+    background-image: url(../images/banner-2.jpg);
+}
+
+.fas_banner_slide3{
+    background-image: url(../images/banner-3.jpg);
+}
+
+.fas_banner_content {
+    text-align: center;
+    color: var(--fas-white-color);
+    height: calc(100vh - 100px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas_banner_content h1{
+    font-size: 75px;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+}
+
+.fas_banner_content h5 {
+    margin: 15px 0 40px;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: var(--fas-font-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--fas-transition);
+    transform: translateX(-100px);
+    background-color: rgb(255 255 255 / 50%);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+}
+
+.swiper-button-prev:hover, .swiper-button-next:hover{
+    background-color: var(--fas-white-color);
+}
+
+.swiper-button-next {
+    transform: translateX(100px);
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after{
+    font-size: 30px;
+}
+
+.fas_banner_slider:hover .swiper-button-prev,
+.fas_banner_slider:hover .swiper-button-next{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    About Section Style
+ *******************************************************/
+
+.fas_about_wrapper, .fas_product_wrapper, .fas_testimonial_wrapper, .fas_footer_wrapper {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    background-color: rgb(234 236 237 / 30%);
+}
+
+.fas_about_img, .fas_about_left_img {
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background-color: #ebecee;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.fas_about_left_img img {
+    min-height: 528px;
+    object-fit: cover;
+    max-height: 528px;
+    object-position: top;
+}
+
+.fas_about_text {
+    position: absolute;
+    right: 10px;
+    margin: auto;
+    padding: 10px 20px;
+    bottom: 10px;
+    color: var(--fas-white-color);
+    background-color: rgb(249 110 137 / 85%);
+    border-radius: 8px;
+    width: 80%;
+}
+
+.fas_about_text h6 {
+    margin: 5px 0 10px;
+}
+
+.fas_about_text h4{
+    font-size: 22px;
+}
+
+.fas_about_text .fas_btn {
+    background-color: var(--fas-white-color);
+    color: var(--fas-font-light);
+    min-height: 40px;
+}
+
+.fas_about_img img {
+    min-height: 252px;
+    object-fit: cover;
+    max-height: 252px;
+    object-position: top;
+    width: 100%;
+}
+
+/********************************************************
+    Shop Section Style
+ *******************************************************/
+
+.fas_shop_wrapper, .fas_service_wrapper, .fas_contact_wrapper{
+    background-color: #fff9f5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.fas_tabs {
+    background-color: var(--fas-white-color);
+    box-shadow: var(--fas-box-shadow);
+    display: flex;
+    justify-content: center;
+    max-width: fit-content;
+    margin: auto;
+    padding: 10px 25px;
+    border-radius: 8px;
+    align-items: center;
+    gap: 10px 25px;
+    flex-wrap: wrap;
+}
+
+.fas_tab_content{
+    display: none;
+}
+
+.fas_tabs li{
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 10px 0;
+    border-bottom: 1px dashed rgb(34 34 34 / 10%);
+    display: flex;
+    color: var(--fas-font-color);
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.fas_tabs li.active{
+    border-bottom: 1px dashed var(--fas-primary-color);
+}
+
+.fas_tabs li.active span{
+    color: var(--fas-primary-color);
+}
+
+.fas_shop_box{
+    border-radius: 10px;
+    background-color: var(--fas-white-color);
+    padding: 5px;
+}
+
+.fas_product_thumb {
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 260px;
+    overflow: hidden;
+    min-height: 260px;
+    background-color: #eaeced;
+}
+
+.fas_product_thumb img {
+    max-height: 250px;
+}
+
+.fas_product_text {
+    padding: 10px;
+}
+
+.fas_product_text h6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-align: left;
+    font-weight: 700;
+}
+
+.fas_product_price, .fas_product_rating {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    line-height: normal;
+}
+
+.fas_product_price {
+    margin: 5px 0 15px;
+}
+
+.fas_product_price span {
+    color: var(--fas-font-light);
+    text-decoration: line-through;
+}
+
+.fas_discount {
+    color: var(--fas-primary-color);
+}
+
+.fas_product_buy {
+    display: flex;
+    justify-content: space-between;
+}
+
+.fas_product_buy .fas_btn {
+    border-radius: 45px;
+    min-height: 45px;
+}
+.fas_buy_rating {
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    gap: 5px;
+}
+
+/********************************************************
+    Product Section Style
+ *******************************************************/
+
+.fas_product_slider {
+    padding: 0 20px 20px;
+}
+
+.fas_product_slider:hover .swiper-button-prev,
+.fas_product_slider:hover .swiper-button-next{
+    transform: translateX(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    Service Section Style
+ *******************************************************/
+
+.fas_shipping_box {
+    display: flex;
+    gap: 15px;
+}
+
+.fas_shipping_text h4 {
+    color: var(--fas-primary-color);
+}
+
+
+/********************************************************
+    Testimonial Section Style
+ *******************************************************/
+
+.fas_client_info {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fas_client_info img {
+    border-radius: 50%;
+    object-fit: cover;
+    width: 80px;
+    height: 80px;
+    max-width: 100%;
+}
+
+.fas_testimonial_wrapper .swiper-pagination {
+    position: relative;
+    bottom: unset;
+    margin-top: 10px;
+}
+
+.fas_testimonial_wrapper .swiper-pagination-bullet-active{
+    background-color: var(--fas-primary-color);
+}
+
+/********************************************************
+    Contact Section Style
+ *******************************************************/
+
+
+.fas_contact_form h5, .fas_contact_add h5 {
+    margin-bottom: 30px;
+    color: var(--fas-primary-color);
+}
+
+.fas_contact_form .mt_popup_form_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fas_contact_form .mt_form_input,
+.fas_contact_form .mt_form_input label,
+.fas_contact_form .mt_form_input input,
+.fas_contact_form .mt_form_input textarea{
+    width: 100%;
+}
+
+.fas_contact_form .mt_form_input input,
+.fas_contact_form .mt_form_input textarea{
+    border: 1px solid #ebebeb;
+    height: 45px;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+
+.fas_contact_form .mt_form_input input:focus,
+.fas_contact_form .mt_form_input textarea:focus{
+    border: 1px solid var(--fas-primary-color);
+}
+
+.fas_contact_form .mt_form_input textarea {
+    height: 100px;
+    padding: 10px;
+    resize: none;
+}
+
+.fas_contact_btn {
+    margin-top: 15px;
+}
+
+.fas_address_area {
+    margin: 40px 0;
+}
+
+.fas_address_area li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.fas_address_area li:first-child{
+    padding-top: 0;
+}
+
+.fas_address_area li span {
+    width: 35px;
+    height: 35px;
+    background-color: #f96e89;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.fas_address_area li a{
+    color: var(--fas-font-color);
+}
+
+.fas_contact_hours h6 {
+    margin-bottom: 5px;
+    color: var(--fas-primary-color);
+}
+
+/********************************************************
+    Footer Section Style
+ *******************************************************/
+
+.fas_footer_wrapper {
+    border-bottom: 1px solid #f1f1f1;
+    border-top: 1px solid #f1f1f1;
+}
+
+.fas_news_area a img {
+    object-position: left;
+}
+
+.fas_news_area p {
+    margin: 15px 0 10px;
+    max-width: 320px;
+}
+
+.fas_newsletter .mt_form_input {
+    margin-bottom: 15px;
+}
+
+.fas_newsletter .mt_form_input:last-child{
+    margin: 0;
+}
+
+.fas_newsletter input {
+    width: 100%;
+    border: 1px solid #dfdfdf;
+    height: 50px;
+    border-radius: 50px;
+    padding: 0 145px 0 15px;
+    outline: none;
+}
+
+.fas_newsletter {
+    position: relative;
+    max-width: 460px;
+}
+
+.fas_newsletter .fas_btn {
+    position: absolute;
+    right: 3px;
+    top: 2px;
+    border-radius: 28px;
+    min-height: 45px;
+}
+
+.fas_footer_menu h5 {
+    margin-bottom: 30px;
+    color: var(--fas-primary-color);
+}
+
+.fas_footer_menu li {
+    margin-top: 10px;
+}
+
+.fas_footer_menu li a{
+    color: var(--fas-font-color);
+}
+
+.fas_footer_menu li a:hover{
+    color: var(--fas-primary-color);
+}
+
+/********************************************************
+    Copyright Section Style
+ *******************************************************/
+
+.fas_copyright_wrapper {
+    padding: 20px 0;
+    background-color: var(--fas-primary-color);
+}
+
+.fas_copy_txt{
+    text-align: center;
+    color: var(--fas-white-color);
+}

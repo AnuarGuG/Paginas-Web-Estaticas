@@ -1,0 +1,1240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>VR Studio Web</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="assets/css/owl.theme.default.min.css" />
+    <link rel="shortcut icon" type="image/png" href="assets/images/favicon.png">
+  </head>
+
+  <body onload=" ">
+    <div id="loader">
+      <div class="vr-lds-facebook">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </div>
+    <div id="myDiv">
+      <div class="vr-navigation mt_bgtempconatainer pp-header-wrapper">
+        <div class="vr-page-width">
+          <div class="vr-nav-bar">
+            <div class="vr-toggle">
+              <img
+                src="assets/images/Logo.png"
+                alt=""
+                class="editableElement"
+                data-kindoff="image"
+                class="vr-click"
+              />
+              <span class="vr-close">X</span>
+            </div>
+            <div class="vr-nav-logo">
+              <a href="javascript:;" class="editableElement" data-kindoff="text">
+                <img src="assets/images/Logo.png" class="editableElement" data-kindoff="image" alt=""/>
+              </a>
+            </div>
+            <div class="vr-menu-block">
+              <div class="fl-menu-box">
+                <a href="javascript:void(0);">
+                  <span></span>
+                  <span></span>
+                  <span></span>
+                </a>
+              </div>
+              <div class="vr-nav-menu">
+                <ul>
+                  <li>
+                    <a
+                      href="#home"
+                      class="editableElement as-CommonClass-navbar" top-h="100"
+                      data-kindoff="text"
+                    >
+                      Home</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#about"
+                      class="editableElement as-CommonClass-navbar" top-h="100"
+                      data-kindoff="text"
+                    >
+                      About Us</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#features"
+                      class="editableElement as-CommonClass-navbar" top-h="100"
+                      data-kindoff="text"
+                    >
+                      Features</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#testimonials"
+                      class="editableElement as-CommonClass-navbar" top-h="100"
+                      data-kindoff="text"
+                    >
+                    Testimonials</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#support"
+                      class="editableElement as-CommonClass-navbar" top-h="100"
+                      data-kindoff="text"
+                    >
+                    Support</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="vr-cart-btn mt_bgtempconatainer">
+                <div class="vr-cart-img">
+                  <img
+                    src="assets/images/cart.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <h3 class="editableElement" data-kindoff="text">
+                  Cart<span class="editableElement" data-kindoff="text"
+                    >(01)</span
+                  >
+                </h3>
+              </div>
+              <div class="vr-shopping-cart">
+                <div class="vr-shopping-cart-header">
+                  <div class="vr-cart-contain">
+                    <img
+                      src="assets/images/cart.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    /><span class="editableElement vr-badge" data-kindoff="text"
+                      >3</span
+                    >
+                  </div>
+                  <div class="vr-shopping-cart-total">
+                    <span
+                      class="editableElement vr-lighter-text"
+                      data-kindoff="text"
+                      >Total:</span
+                    >
+                    <span
+                      class="editableElement vr-main-color-text"
+                      data-kindoff="text"
+                      >$2,229.97</span
+                    >
+                  </div>
+                </div>
+                <!--end shopping-cart-header -->
+
+                <ul class="vr-shopping-cart-items">
+                  <li class="vr-clearfix">
+                    <img
+                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item1.jpg"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt="item1"
+                    />
+                    <span
+                      class="editableElement vr-item-name"
+                      data-kindoff="text"
+                      >Sony DSC-RX100M III</span
+                    >
+                    <span
+                      class="editableElement vr-item-price"
+                      data-kindoff="text"
+                      >$849.99</span
+                    >
+                    <span
+                      class="editableElement vr-item-quantity"
+                      data-kindoff="text"
+                      >Quantity: 01</span
+                    >
+                    <span class="vr-cancel-cross">x</span>
+                  </li>
+
+                  <li class="vr-clearfix">
+                    <img
+                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item2.jpg"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt="item1"
+                    />
+                    <span
+                      class="editableElement vr-item-name"
+                      data-kindoff="text"
+                      >KS Automatic Mechanic...</span
+                    >
+                    <span
+                      class="editableElement vr-item-price"
+                      data-kindoff="text"
+                      >$1,249.99</span
+                    >
+                    <span
+                      class="editableElement vr-item-quantity"
+                      data-kindoff="text"
+                      >Quantity: 01</span
+                    >
+                    <span class="vr-cancel-cross">x</span>
+                  </li>
+
+                  <li class="vr-clearfix">
+                    <img
+                      src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/195612/cart-item3.jpg"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt="item1"
+                    />
+                    <span
+                      class="editableElement vr-item-name"
+                      data-kindoff="text"
+                      >Kindle, 6" Glare-Free To...</span
+                    >
+                    <span
+                      class="editableElement vr-item-price"
+                      data-kindoff="text"
+                      >$129.99</span
+                    >
+                    <span
+                      class="editableElement vr-item-quantity"
+                      data-kindoff="text"
+                      >Quantity: 01</span
+                    >
+                    <span class="vr-cancel-cross">x</span>
+                  </li>
+                </ul>
+
+                <a
+                  href="javascript:;"
+                  class="editableElement vr-button"
+                  data-kindoff="text"
+                >
+                  Checkout</a
+                >
+              </div>
+              <!--end shopping-cart -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-banner mt_bgtempconatainer" id="home">
+        <div class="vr-page-width">
+          <div class="vr-ban-content">
+            <div class="vr-ban-title">
+              <p class="editableElement" data-kindoff="text">
+                We Craft Virtual and Augmented Reality Experiences
+              </p>
+              <div class="vr-vr-image">
+                <img
+                  src="assets/images/vr-image.png"
+                  class="editableElement"
+                  data-kindoff="image"
+                  alt=""
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-ban-product mt_bgtempconatainer">
+        <div class="vr-container">
+          <div class="vr-pds-mnge">
+            <div class="vr-pro-title mt_bgtempconatainer">
+              <h3 class="editableElement" data-kindoff="text">
+                Select VR Types
+              </h3>
+            </div>
+            <div class="vr-product-content mt_bgtempconatainer">
+              <div class="vr-pro-slide owl-carousel owl-theme">
+                <div class="vr-product-box item">
+                  <div class="vr-pro-image">
+                    <img
+                      src="assets/images/p-one.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <h5 class="editableElement" data-kindoff="text">
+                    Non-immersive Virtual Reality
+                  </h5>
+                </div>
+                <div class="vr-product-box item">
+                  <div class="vr-pro-image">
+                    <img
+                      src="assets/images/p-two.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <h5 class="editableElement" data-kindoff="text">
+                    Semi-immersive Virtual Reality
+                  </h5>
+                </div>
+                <div class="vr-product-box item">
+                  <div class="vr-pro-image">
+                    <img
+                      src="assets/images/p-three.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <h5 class="editableElement" data-kindoff="text">
+                    Fully Immersive Virtual Reality
+                  </h5>
+                </div>
+                <div class="vr-product-box item">
+                  <div class="vr-pro-image">
+                    <img
+                      src="assets/images/p-one.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <h5 class="editableElement" data-kindoff="text">
+                    Non-immersive Virtual Reality
+                  </h5>
+                </div>
+                <div class="vr-product-box item">
+                  <div class="vr-pro-image">
+                    <img
+                      src="assets/images/p-two.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <h5 class="editableElement" data-kindoff="text">
+                    Semi-immersive Virtual Reality
+                  </h5>
+                </div>
+                <div class="vr-product-box item">
+                  <div class="vr-pro-image">
+                    <img
+                      src="assets/images/p-three.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <h5 class="editableElement" data-kindoff="text">
+                    Fully Immersive Virtual Reality
+                  </h5>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-feature mt_bgtempconatainer" id="features">
+        <div class="vr-container">
+          <div class="vr-feature-wrap">
+            <div class="vr-feature-title">
+              <h3 class="editableElement" data-kindoff="text">
+                Our VR Features
+              </h3>
+              <h2 class="editableElement" data-kindoff="text">
+                Discover A Whole New Reality
+              </h2>
+            </div>
+            <div class="vr-feature-content">
+              <div class="vr-feature-card mt_bgtempconatainer">
+                <div class="vr-feat-img">
+                  <img
+                    src="assets/images/icon-1.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-feat-con">
+                  <h3 class="editableElement" data-kindoff="text">
+                    360 Degree Veiwing Angle
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                  </p>
+                  <a
+                    href="javascript:;"
+                    class="editableElement"
+                    data-kindoff="text"
+                    >READ MORE</a
+                  >
+                </div>
+              </div>
+              <div class="vr-feature-card mt_bgtempconatainer">
+                <div class="vr-feat-img">
+                  <img
+                    src="assets/images/icon-2.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-feat-con">
+                  <h3 class="editableElement" data-kindoff="text">
+                    3D Screen Great Experience
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                  </p>
+                  <a
+                    href="javascript:;"
+                    class="editableElement"
+                    data-kindoff="text"
+                    >READ MORE</a
+                  >
+                </div>
+              </div>
+              <div class="vr-feature-card mt_bgtempconatainer">
+                <div class="vr-feat-img">
+                  <img
+                    src="assets/images/icon-3.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-feat-con">
+                  <h3 class="editableElement" data-kindoff="text">
+                    Two Touch Great Controllers
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                  </p>
+                  <a
+                    href="javascript:;"
+                    class="editableElement"
+                    data-kindoff="text"
+                    >READ MORE</a
+                  >
+                </div>
+              </div>
+              <div class="vr-feature-card mt_bgtempconatainer">
+                <div class="vr-feat-img">
+                  <img
+                    src="assets/images/icon-4.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-feat-con">
+                  <h3 class="editableElement" data-kindoff="text">
+                    Comfortable to Wear for any Ages
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                  </p>
+                  <a
+                    href="javascript:;"
+                    class="editableElement"
+                    data-kindoff="text"
+                    >READ MORE</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-about-us mt_bgtempconatainer" id="about">
+        <div class="vr-container">
+          <div class="vr-about-wrap">
+            <div class="vr-about-img" data-aos="fade-down-right">
+              <img
+                src="assets/images/about.png"
+                class="editableElement"
+                data-kindoff="image"
+                alt=""
+              />
+            </div>
+            <div class="vr-about-content">
+              <div class="vr-about-con">
+                <h5 class="editableElement" data-kindoff="text">ABOUT US</h5>
+                <h3
+                  class="editableElement"
+                  data-kindoff="text"
+                  data-aos="fade-left"
+                >
+                  Reach Out & Let Your Mind Explore
+                </h3>
+                <p
+                  class="editableElement"
+                  data-kindoff="text"
+                  data-aos="fade-left"
+                >
+                  Consectetur adipiscing elit sed eiusod tempor incididunt eorem
+                  ipseiim dolor sit amet, consectetur adipisicing elit, sied
+                  sdeo eiusmesideod tempor incididunt ut labore et dolore
+                  magnuesat enesim ad minim veniamquis nostrud.
+                </p>
+                <div
+                  class="vr-about-btn mt_bgtempconatainer"
+                  data-aos="fade-up"
+                >
+                  <a
+                    href="javascript:;"
+                    class="editableElement"
+                    data-kindoff="text"
+                    >Read More</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-slide-ban mt_bgtempconatainer">
+        <div class="vr-slide-title">
+          <h3 class="editableElement" data-kindoff="text">Our Video</h3>
+          <h2 class="editableElement" data-kindoff="text">
+            Empowering VR to improve people's lives
+          </h2>
+        </div>
+        <div class="vr-show-slider swiper mySwiper vr-vdo-banner-slide">
+          <div class="swiper-wrapper">
+            <div class="vr-show-slider swiper-slide">
+              <img
+                src="assets/images/slide.png"
+                class="editableElement vr-slider-image"
+                data-kindoff="image"
+                alt=""
+              />
+              <div class="vr-page-width">
+                <div class="vr-slide-content">
+                  <div class="vr-slide-con">
+                    <h3 class="editableElement" data-kindoff="text">
+                      Reach Out & Let Your Mind Explore
+                    </h3>
+                    <p class="editableElement" data-kindoff="text">
+                      Consectetur adipiscing elit sed eiusod tempor incididunt
+                      eorem ipseiim dolor sit amet consectetur adipisicing elit,
+                      sieessd sdeo eiusmesideod tempor incididunt ut labore.
+                    </p>
+                    <div class="vr-video-btn" data-aos="fade-right">
+                      <div class="vr-vdo-pause mt_bgtempconatainer">
+                        <img
+                          src="assets/images/pause.png"
+                          class="editableElement"
+                          data-kindoff="image"
+                          alt=""
+                        />
+                      </div>
+                      <a
+                        href="javascript:;"
+                        class="editableElement"
+                        data-kindoff="text"
+                        >PLAY VIDEO</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-show-slider swiper-slide">
+              <img
+                src="assets/images/slide.png"
+                class="editableElement vr-slider-image"
+                data-kindoff="image"
+                alt=""
+              />
+              <div class="vr-page-width">
+                <div class="vr-slide-content">
+                  <div class="vr-slide-con">
+                    <h3 class="editableElement" data-kindoff="text">
+                      Reach Out & Let Your Mind Explore
+                    </h3>
+                    <p class="editableElement" data-kindoff="text">
+                      Consectetur adipiscing elit sed eiusod tempor incididunt
+                      eorem ipseiim dolor sit amet consectetur adipisicing elit,
+                      sieessd sdeo eiusmesideod tempor incididunt ut labore.
+                    </p>
+                    <div class="vr-video-btn" data-aos="fade-right">
+                      <div class="vr-vdo-pause mt_bgtempconatainer">
+                        <img
+                          src="assets/images/pause.png"
+                          class="editableElement"
+                          data-kindoff="image"
+                          alt=""
+                        />
+                      </div>
+                      <a
+                        href="javascript:;"
+                        class="editableElement"
+                        data-kindoff="text"
+                        >PLAY VIDEO</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="vr-show-slider swiper-slide">
+              <img
+                src="assets/images/slide.png"
+                class="editableElement vr-slider-image"
+                data-kindoff="image"
+                alt=""
+              />
+              <div class="vr-page-width">
+                <div class="vr-slide-content">
+                  <div class="vr-slide-con">
+                    <h3 class="editableElement" data-kindoff="text">
+                      Reach Out & Let Your Mind Explore
+                    </h3>
+                    <p class="editableElement" data-kindoff="text">
+                      Consectetur adipiscing elit sed eiusod tempor incididunt
+                      eorem ipseiim dolor sit amet consectetur adipisicing elit,
+                      sieessd sdeo eiusmesideod tempor incididunt ut labore.
+                    </p>
+                    <div class="vr-video-btn" data-aos="fade-right">
+                      <div class="vr-vdo-pause mt_bgtempconatainer">
+                        <img
+                          src="assets/images/pause.png"
+                          class="editableElement"
+                          data-kindoff="image"
+                          alt=""
+                        />
+                      </div>
+                      <a
+                        href="javascript:;"
+                        class="editableElement"
+                        data-kindoff="text"
+                        >PLAY VIDEO</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+
+      <div class="vr-testimonal mt_bgtempconatainer" id="testimonials">
+        <div class="vr-container">
+          <div class="vr-test-wrapper">
+            <div class="vr-test-title">
+              <h3 class="editableElement" data-kindoff="text">Testimonials</h3>
+              <h2 class="editableElement" data-kindoff="text">
+                We Have Stories To inspire you
+              </h2>
+            </div>
+            <div class="vr-test-box swiper myTestSwiper vr-testimonial-slide">
+              <div class="swiper-wrapper">
+                <div class="vr-test-slide mt_bgtempconatainer swiper-slide">
+                  <div class="vr-test-img" data-aos="zoom-in">
+                    <img
+                      src="assets/images/t-one.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <div class="vr-test-content">
+                    <div class="vr-test-con">
+                      <p class="editableElement" data-kindoff="text">
+                        Consectetur adipiscing elit sed eiusod tempor incididunt
+                        eorem ipseiim dolesder siet amet, consectetur
+                        adipisicing elit, sied sdeo eiusmesideod tesdeesd eimpor
+                        incididunter ut labore et dolore magnuesat enesim ad
+                        minim veniamquis nostrud and the testimonial is the part
+                        of new companes .
+                      </p>
+                      <h5 class="editableElement" data-kindoff="text">
+                        David Parker<span
+                          class="editableElement"
+                          data-kindoff="text"
+                          >UI/UX Designer</span
+                        >
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="vr-test-img-quote">
+                    <img
+                      src="assets/images/shape.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="vr-test-slide mt_bgtempconatainer swiper-slide">
+                  <div class="vr-test-img" data-aos="zoom-in">
+                    <img
+                      src="assets/images/t-one.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <div class="vr-test-content">
+                    <div class="vr-test-con">
+                      <p class="editableElement" data-kindoff="text">
+                        Consectetur adipiscing elit sed eiusod tempor incididunt
+                        eorem ipseiim dolesder siet amet, consectetur
+                        adipisicing elit, sied sdeo eiusmesideod tesdeesd eimpor
+                        incididunter ut labore et dolore magnuesat enesim ad
+                        minim veniamquis nostrud and the testimonial is the part
+                        of new companes .
+                      </p>
+                      <h5 class="editableElement" data-kindoff="text">
+                        David Parker<span
+                          class="editableElement"
+                          data-kindoff="text"
+                          >UI/UX Designer</span
+                        >
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="vr-test-img-quote">
+                    <img
+                      src="assets/images/shape.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                </div>
+                <div class="vr-test-slide mt_bgtempconatainer swiper-slide">
+                  <div class="vr-test-img" data-aos="zoom-in">
+                    <img
+                      src="assets/images/t-one.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                  <div class="vr-test-content">
+                    <div class="vr-test-con">
+                      <p class="editableElement" data-kindoff="text">
+                        Consectetur adipiscing elit sed eiusod tempor incididunt
+                        eorem ipseiim dolesder siet amet, consectetur
+                        adipisicing elit, sied sdeo eiusmesideod tesdeesd eimpor
+                        incididunter ut labore et dolore magnuesat enesim ad
+                        minim veniamquis nostrud and the testimonial is the part
+                        of new companes .
+                      </p>
+                      <h5 class="editableElement" data-kindoff="text">
+                        David Parker<span
+                          class="editableElement"
+                          data-kindoff="text"
+                          >UI/UX Designer</span
+                        >
+                      </h5>
+                    </div>
+                  </div>
+                  <div class="vr-test-img-quote">
+                    <img
+                      src="assets/images/shape.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-button-next mt_bgtempconatainer"></div>
+              <div class="swiper-button-prev mt_bgtempconatainer"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-advantage mt_bgtempconatainer">
+        <div class="vr-container">
+          <div class="vr-ads-wrap">
+            <div class="vr-ads-title">
+              <h3 class="editableElement" data-kindoff="text">
+                Our Advantages
+              </h3>
+              <h2 class="editableElement" data-kindoff="text">
+                Why customers choose us
+              </h2>
+            </div>
+            <div class="vr-ads-box">
+              <div class="vr-ads-img">
+                <img
+                  src="assets/images/bg-ad.png"
+                  class="editableElement"
+                  data-kindoff="image"
+                  alt=""
+                />
+              </div>
+              <div class="vr-ads-content">
+                <div
+                  class="vr-ads-con mt_bgtempconatainer"
+                  data-aos="fade-down"
+                >
+                  <h3 class="editableElement" data-kindoff="text">
+                    Extra Comfort For Head
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                    esdorem ipisum dolor sit amet, consectetur adipisicing
+                    elitsed eiusmod.
+                  </p>
+                </div>
+                <div
+                  class="vr-ads-con mt_bgtempconatainer"
+                  data-aos="fade-left"
+                >
+                  <h3 class="editableElement" data-kindoff="text">
+                    Easy Operation Panel
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                    esdorem ipisum dolor sit amet, consectetur adipisicing
+                    elitsed eiusmod.
+                  </p>
+                </div>
+                <div
+                  class="vr-ads-con mt_bgtempconatainer"
+                  data-aos="fade-left"
+                >
+                  <h3 class="editableElement" data-kindoff="text">
+                    High Solution Density
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                    esdorem ipisum dolor sit amet, consectetur adipisicing
+                    elitsed eiusmod.
+                  </p>
+                </div>
+                <div class="vr-ads-con mt_bgtempconatainer" data-aos="fade-up">
+                  <h3 class="editableElement" data-kindoff="text">
+                    360 Veiwing Angle
+                  </h3>
+                  <p class="editableElement" data-kindoff="text">
+                    Consectetur adipiscing elit sed eiusod tempor incididunt.
+                    esdorem ipisum dolor sit amet, consectetur adipisicing
+                    elitsed eiusmod.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-partners mt_bgtempconatainer">
+        <div class="vr-container">
+          <div class="vr-partners-wrap">
+            <div class="vr-par-title">
+              <h5 class="editableElement" data-kindoff="text">20,000+</h5>
+              <h3 class="editableElement" data-kindoff="text">
+                Trusted Partners Around The World
+              </h3>
+            </div>
+            <div class="vr-par-icons">
+              <div class="owl-carousel owl-theme">
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p1.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p2.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p3.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p4.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p5.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p6.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+                <div class="vr-par-logo item">
+                  <img
+                    src="assets/images/p7.png"
+                    class="editableElement"
+                    data-kindoff="image"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="vr-newsletter-us mt_bgtempconatainer">
+        <div class="vr-container">
+          <div class="vr-nls-wrap">
+            <div class="vr-nls-content">
+              <div class="vr-nls-con">
+                <h5
+                  class="editableElement"
+                  data-kindoff="text"
+                  data-aos="fade-right"
+                >
+                  Newsletter
+                </h5>
+                <h3
+                  class="editableElement"
+                  data-kindoff="text"
+                  data-aos="fade-right"
+                >
+                  Subscribe To Our Newsletter
+                </h3>
+                <div class="vr-nls-email" data-aos="fade-right">
+                  <form>
+                    <div
+                      class="mt_popup_form editableElement"
+                      data-kindoff="form"
+                    >
+                      <div class="mt_popup_form_container">
+                        <div class="mt_form_input" id="pp_email">
+                          <input
+                            type="email"
+                            name="pp_email"
+                            placeholder="Enter Email Here..."
+                            class="theme_input data-default"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <div class="vr-nls-submit">
+                      <button type="submit" class="mtdefaultformbtn">
+                        Subscribe Now
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div class="vr-nls-img" data-aos="fade-up-left">
+              <img
+                src="assets/images/news.png"
+                class="editableElement"
+                data-kindoff="image"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vr-footer mt_bgtempconatainer" id="support">
+        <div class="vr-container">
+          <div class="vr-footer-wrap">
+            <div class="vr-footer-top">
+              <div class="vr-foot-menu">
+                <h3 class="editableElement" data-kindoff="text">
+                  Company Links
+                </h3>
+                <ul>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Sell online</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Features</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Examples</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Website editor</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                    >
+                      Online retail</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Ecommmerce Website</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Domain Names</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="vr-foot-menu">
+                <h3 class="editableElement" data-kindoff="text">About Us</h3>
+                <ul>
+                  <li>
+                    <a
+                      href="#about"
+                      class="editableElement as-CommonClass-navbar" top-h="100"
+                      data-kindoff="text"
+                    >
+                      About</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Privacy & Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Terms & Conditions</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Career</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Management</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Ecommmerce Website</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="vr-foot-menu">
+                <h3 class="editableElement" data-kindoff="text">
+                  Support Dask
+                </h3>
+                <ul>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >24/7 support</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Pixelmarket Help Center</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Pixelmarket Community</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >API documentation</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Free tools</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Website For Sales</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="javascript:;"
+                      class="editableElement"
+                      data-kindoff="text"
+                      >Web development</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="vr-foot-menu vr-twit">
+                <h3 class="editableElement" data-kindoff="text">
+                  Latest Twitter
+                </h3>
+                <div class="vr-foot-aplign">
+                  <p>
+                    <img
+                      src="assets/images/social.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+
+                    <span class="editableElement" data-kindoff="text"
+                      >Nam praesent quisque pulvinarer Neque viverra facilisi
+                      gravida</span
+                    >
+                    <span class="editableElement" data-kindoff="text"
+                      >13 April 2023</span
+                    >
+                  </p>
+
+                  <p>
+                    <img
+                      src="assets/images/social.png"
+                      class="editableElement"
+                      data-kindoff="image"
+                      alt=""
+                    />
+
+                    <span class="editableElement" data-kindoff="text"
+                      >Nam praesent quisque pulvinarer Neque viverra facilisi
+                      gravida</span
+                    >
+                    <span class="editableElement" data-kindoff="text"
+                      >29 July 2023</span
+                    >
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="vr-footer-bottom mt_bgtempconatainer">
+              <div class="vr-foot-offer">
+                <h3 class="editableElement" data-kindoff="text">
+                  Register Now For Save 25%
+                </h3>
+                <p class="editableElement" data-kindoff="text">
+                  We provide you exclusive promo codes and coupons. Keep up with
+                  the latest sales and the hottest deals available online.
+                </p>
+              </div>
+              <a href="javascript:;" class="editableElement" data-kindoff="text"
+                >Register Now</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="vr-foot-copy mt_bgtempconatainer">
+        <div class="vr-container">
+          <div class="vr-foot-wrap">
+            <h5 class="editableElement" data-kindoff="text">
+              Copyright © 2023 Virtual Reality. All Right Reserved.
+            </h5>
+            <div class="vr-foot-con">
+              <a href="javascript:;" class="editableElement" data-kindoff="text"
+                >Terms Of Services</a
+              >
+              <a href="javascript:;" class="editableElement" data-kindoff="text"
+                >Policy Privacy</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/js/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="assets/js/custom.js"></script>
+  </body>
+</html>

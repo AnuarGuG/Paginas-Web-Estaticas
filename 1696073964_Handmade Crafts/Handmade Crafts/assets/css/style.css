@@ -1,0 +1,716 @@
+/*
+[Master Stylesheet] 
+Project: Handmade Crafts Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Trirong:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --hmc-primary-color:#df628d;
+    --hmc-black-color: #191919;
+    --hmc-white-color: #ffffff;
+    --hmc-transition: all 0.3s;
+    --hmc-border-radius: 8px;
+    --hmc-box-shadow: 0 0 25px rgb(0 0 0 / 10%);
+} 
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--hmc-black-color);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: var(--hmc-font-color);
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--hmc-primary-color);
+    width: 4px;
+}
+
+a, a:hover, a:focus, button, button:hover, button:focus{	
+	text-decoration: none;
+	-webkit-transition: var(--hmc-transition);
+    -moz-transition: var(--hmc-transition);
+    -ms-transition: var(--hmc-transition);
+    -o-transition: var(--hmc-transition);
+    transition: var(--hmc-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--hmc-transition);
+    -moz-transition: var(--hmc-transition);
+    -ms-transition: var(--hmc-transition);
+    -o-transition: var(--hmc-transition);
+    transition: var(--hmc-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    text-transform: capitalize;
+    font-family: 'Trirong', serif;
+}
+
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 70px 0;
+}
+
+.hmc_container {
+    max-width: 1500px;
+}
+
+.row{
+    row-gap: 24px;
+}
+
+.hmc_section_heading {
+    gap: 15px;
+   margin-bottom: 30px;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   position: relative;
+}
+
+.hmc_section_heading .swiper-button-prev, .hmc_section_heading .swiper-button-next {
+    position: relative;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    margin-top: unset;
+}
+
+.hmc_swiper_nav {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.hmc_section_heading .swiper-button-prev{
+    transform: none;
+}
+
+.hmc_btm_btn a {
+    margin: auto;
+}
+
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.hmc-top-icon a {
+    display: flex;
+    background-color: var(--hmc-primary-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--hmc-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 99;
+    animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+
+.hmc-top-icon a:active {
+  background-color: var(--hmc-black-light);
+}
+.hmc-top-icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--hmc-white-color);
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Button Style
+*******************************************************/
+
+.hmc_btn {
+    font-size: 14px;
+    color: var(--hmc-white-color);
+    background-color: var(--hmc-primary-color);
+    font-weight: 400;
+    font-family: 'Trirong', serif;
+    text-transform: capitalize;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    max-width: 160px;
+    border-radius: 6px;
+}
+
+.hmc_btn:hover {
+    color: var(--hmc-white-color);
+    background-color: var(--hmc-black-color);
+}
+
+/********************************************************
+    Header Section Style
+*******************************************************/
+
+.pp-header-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    padding: 30px 0;
+    transition: var(--hmc-transition);
+    background-color: var(--hmc-white-color);
+    box-shadow: var(--hmc-box-shadow);
+}
+
+.pp-header-wrapper.pp-header-fixed{
+    position: fixed;
+    animation: goDown 0.5s ease-in-out forwards;
+}
+
+@keyframes goDown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.hmc_logo {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hmc_logo img {
+    object-position: left;
+}
+
+.hmc_toggle_menu {
+    cursor: pointer;
+    display: none;
+}
+
+.pp-header-wrapper nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hmc_menu {
+    display: flex;
+    align-items: center;
+    gap: 70px;
+}
+
+.pp-header-wrapper nav ul li a {
+    color: var(--hmc-black-color);
+    padding: 18px 10px;
+    font-family: 'Trirong', serif;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.pp-header-wrapper nav ul li a:hover{
+    color: var(--hmc-primary-color);
+}
+
+.hmc_body_overlay {
+    position: fixed;
+    z-index: 100;
+    background-color: rgb(0 0 0 / 40%);
+    width: 100%;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--hmc-transition);
+    cursor: zoom-out;
+}
+
+.menu-open .hmc_body_overlay{
+    opacity: 1;
+    visibility: visible;
+}
+/********************************************************
+    Banner Section Style
+*******************************************************/
+
+.hmc_banner_wrapper {
+    position: relative;
+    padding-top: 100px;
+}
+
+.hmc_banner_slider .swiper-slide{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.hmc_banner_slider .swiper-slide.slide-1{
+    background-image: url(../images/slide-1.jpg);
+}
+.hmc_banner_slider .swiper-slide.slide-2{
+    background-image: url(../images/slide-2.jpg);
+}
+.hmc_banner_slider .swiper-slide.slide-3{
+    background-image: url(../images/slide-3.jpg);
+}
+
+.hmc_bnr_content {
+    max-width: 720px;
+    text-align: center;
+    margin: auto;
+    padding: 70px 0;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 100px);
+    justify-content: center;
+    color: var(--hmc-white-color);
+}
+
+.hmc_bnr_content h1 {
+    text-transform: uppercase;
+    font-size: 70px;
+}
+
+.hmc_bnr_content h3 {
+    color: var(--hmc-primary-color);
+    margin: 5px 0 20px;
+}
+
+.hmc_bnr_content p {
+    font-size: 18px;
+}
+
+.hmc_bnr_content .hmc_btn {
+    margin: 30px auto 0;
+    min-width: 160px;
+}
+
+.hmc_bnr_content h1,
+.hmc_bnr_content h3,
+.hmc_bnr_content p{
+    transition: all 3s;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(50px);
+}
+
+.swiper-slide-active .hmc_bnr_content h1,
+.swiper-slide-active .hmc_bnr_content h3,
+.swiper-slide-active .hmc_bnr_content p{
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    top: inherit;
+    background-color: var(--hmc-white-color);
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    box-shadow: var(--hmc-box-shadow);
+}
+
+.swiper-button-prev {
+    right: 10px;
+    left: inherit;
+    transform: translateX(-50px);
+}
+
+.swiper-button-prev:after, .swiper-button-next:after{
+    font-size: 15px;
+    color: var(--hmc-black-color);
+}
+
+/********************************************************
+    Shipping Section Style
+*******************************************************/
+
+.hmc_shipping_wrapper, .hmc_collections_wrapper, .hmc_footer_wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/sec_bg.jpg);
+    background-attachment: fixed;
+}
+
+.hmc_shipping_box {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.hmc_shipping_icon {
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--hmc-white-color);
+    border-radius: 50%;
+}
+
+.hmc_shipping_text h5 {
+    margin-bottom: 5px;
+    color: var(--hmc-white-color);
+}
+
+.hmc_shipping_text p{
+    color: var(--hmc-white-color);
+}
+
+/********************************************************
+    About Section Style
+*******************************************************/
+
+.hmc_about_wrapper, .hmc_blogs_wrapper{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgb(223 98 141 / 5%);
+}
+
+.hmc_about_txt {
+    padding-left: 50px;
+}
+
+.hmc_about_img img {
+    width: 100%;
+    object-fit: cover;
+}
+
+.hmc_about_txt h6{
+    color: var(--hmc-primary-color);
+
+}
+
+.hmc_about_txt h3 {
+    margin: 5px 0 20px;
+}
+
+.hmc_about_txt p{
+    margin-bottom: 20px;
+}
+
+/********************************************************
+    Collections Section Style
+*******************************************************/
+
+.hmc_collections_wrapper .hmc_section_heading h3{
+    color: var(--hmc-white-color);
+}
+
+.hmc_coll_box {
+    background-color: var(--hmc-white-color);
+    box-shadow: var(--hmc-box-shadow);
+    padding: 5px;
+}
+
+.hmc_coll_img{
+    overflow: hidden;
+    max-height: 275px;
+}
+
+.hmc_coll_img img{
+    min-height: 275px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.hmc_coll_img img, .hmc_blog_img img{
+    transition: var(--hmc-transition);
+}
+
+.hmc_coll_box:hover .hmc_coll_img img,
+.hmc_blog_box:hover .hmc_blog_img img{
+    transform: scale(1.2);
+}
+
+.hmc_coll_text {
+    padding: 15px 10px;
+}
+
+.hmc_coll_text h6, .hmc_blog_text h6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.hmc_rating {
+    display: flex;
+    align-items: center;
+    line-height: normal;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+
+.hmc_coll_price {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hmc_coll_price p {
+    font-weight: 600;
+}
+
+.hmc_coll_price small {
+    font-size: 15px;
+    text-decoration: line-through;
+    color: #c5c4c4;
+    font-weight: 600;
+}
+
+.hmc_coll_price span{
+    color: var(--hmc-primary-color);
+    font-weight: 600;
+}
+
+/********************************************************
+    Blog Section Style
+*******************************************************/
+
+.hmc_section_heading a{
+    color: var(--hmc-primary-color);
+}
+
+.hmc_blog_box {
+    background-color: var(--hmc-white-color);
+    box-shadow: var(--hmc-box-shadow);
+    padding: 5px;
+    overflow: hidden;
+}
+
+.hmc_blog_img {
+    position: relative;
+    overflow: hidden;
+    max-height: 300px;
+}
+
+.hmc_blog_img img{
+    object-fit: cover;
+    width: 100%;
+    min-height: 300px;
+}
+
+.hmc_blog_date {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+}
+
+.hmc_blog_date p {
+    color: var(--hmc-white-color);
+    background-color: var(--hmc-primary-color);
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hmc_blog_date span {
+    background-color: var(--hmc-white-color);
+    padding: 5px 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hmc_blog_text{
+    padding: 15px 10px;
+}
+
+.hmc_blog_text p{
+    margin: 10px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+}
+
+.hmc_blog_text a{
+    color: var(--hmc-primary-color);
+}
+
+/********************************************************
+    Footer Section Style
+*******************************************************/
+
+.hmc_footer_logo img {
+    object-position: left;
+}
+
+.hmc_footer_text {
+    margin: 20px 0 30px;
+    color: var(--hmc-white-color);
+}
+
+.hmc_footer_social {
+    display: flex;
+    gap: 15px;
+}
+
+.hmc_footer_social li a {
+    width: 44px;
+    height: 44px;
+    color: var(--hmc-white-color);
+    border-radius: 10px;
+    background-color: var(--hmc-primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: var(--hmc-transition);
+    overflow: hidden;
+}
+
+.hmc_footer_social li a:hover{
+    transform: translateY(-5px);
+}
+
+.hmc_footer_social li a img{
+    max-width: 30px;
+    max-height: 30px;
+    object-fit: contain;
+}
+
+.hmc_footer_link h5 {
+    margin-bottom: 20px;
+    color: var(--hmc-white-color);
+}
+
+.hmc_footer_link ul li {
+    margin-bottom: 15px;
+}
+
+.hmc_footer_link ul li:last-child{
+    margin: 0;
+}
+
+.hmc_footer_link ul li a{
+    text-transform: capitalize;
+    color: var(--hmc-white-color);
+}
+
+.hmc_footer_link ul li a:hover{
+    color: var(--hmc-primary-color);
+}
+
+.hmc_footer_link .mt_form_input input {
+    height: 50px;
+    width: 100%;
+    background-color: var(--hmc-white-color);
+    border-radius: 10px;
+    color: var(--hmc-black-color);
+    box-shadow: var(--hmc-box-shadow);
+    font-weight: 400;
+    border: none;
+    padding: 0 20px;
+    margin-bottom: 15px;
+}
+
+.hmc_footer_link button{
+    min-width: 100%;
+}
+
+/********************************************************
+    Copyright Section Style
+*******************************************************/
+
+.hmc_copyright_wrapper {
+    background-color: var(--hmc-primary-color);
+    text-align: center;
+    padding: 15px 0;
+}
+
+.hmc_copyright_wrapper p{
+    color: var(--hmc-white-color);
+}

@@ -1,0 +1,1185 @@
+:root{
+  --blue-color:#0243c5;
+  --white-color:#ffffff;
+  --black-color:#000219;
+  --para-color:#8b8787;
+  --light-bg:#F7F9FF;
+  --border-color:#cccccc47;
+  --font16:16px;
+  --font18:18px;
+  --font22px:22px;
+  --font25px:25px;
+  --font35px:35px;
+  --font-weight300:300;
+  --font-weight500:500;
+  --font-weight600:600;
+  --transition: all 0.5s;
+}
+*{
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+*, *::before, *::after{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+}
+body{
+font-family: 'Roboto', sans-serif;
+line-height: 1.5;
+-webkit-font-smoothing: antialiased;
+-webkit-transition: all 0.5s;
+-moz-transition: all 0.5s;
+-ms-transition: all 0.5s;
+-o-transition: all 0.5s;
+transition: all 0.5s;
+}
+h1,h2,h3,h4,h5,h6{
+line-height: 1.2;
+margin:0;
+padding:0;
+}
+p{
+color: var(--para-color);
+}
+ul,p{
+margin: 0;
+padding: 0;
+}
+ul li{
+list-style-type: none;
+}
+a{
+text-decoration: none;
+}
+.form-control:focus{
+box-shadow: none;
+}
+:focus-visible{
+outline: none;
+}
+input:focus-visible {
+outline: none;
+}
+.form-control:focus{
+box-shadow: none;
+border-color: transparent;
+}
+img{
+max-width: 100%;
+}
+::-webkit-scrollbar-track {
+-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+background-color: #0243c5;
+}
+
+::-webkit-scrollbar {
+width: 5px;
+background-color: #f5f5f5;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: var(--white-color);
+}
+/* ---btn css */
+a.cbs-all-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: var(--font18);
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--white-color);
+  letter-spacing: 1px;
+  transition: var(--transition);
+  height: 45px;
+  margin-bottom: 10px;
+  background: var(--blue-color);
+  max-width: 150px;
+}
+a.cbs-all-btn.cbs-btn-border {
+  background: transparent;
+  border:1px solid #ffffff;
+  color: #ffffff;
+}
+a.cbs-all-btn:hover{
+  transform: translateX(5px);
+}
+
+
+
+/* =============== top header css ================== */
+.cbs-top-header {
+  padding: 0px 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-bottom: 1px solid var(--border-color);
+}
+.cbs-top-social ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 160px;
+}
+.cbs-top-social ul li img {
+  max-width: 20px;
+  height: 20px;
+  object-fit: contain;
+  object-position: top;
+}
+.cbs-top-right {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.cbs-top-flex {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 30px;
+  padding: 10px 0 10px 30px;
+  border-left: 1px solid var(--border-color);
+}
+.cbs-top-icon img {
+  max-width: 32px;
+  max-height: 32px;
+  min-height: 32px;
+  object-fit: cover;
+  object-position: top;
+}
+.cbs-ton-text {
+  padding: 0px 0px 0px 15px;
+}
+.cbs-ton-text h2 {
+  font-size: var(--font18);
+}
+.cbs-ton-text p{
+  font-size: var(--font16);
+  text-transform: capitalize;
+  padding: 5px 0 0 0;
+}
+.cbs-res-toggle{
+  display: none;
+}
+.cbs-header-overlay {
+  background: #00000091;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+}
+/* ===================== main header css start *========================= */
+.cbs-main-header-wrapepr {
+  padding: 0px 50px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.pp-header-wrapper.pp-header-fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 99;
+  background: #ffffff;
+  transition: all 0.3s ease-in-out;
+  -webkit-animation: slideInDown .3s;
+  -moz-animation: slideInDown 0.3s;
+  -ms-animation: slideInDown 0.3s;
+  -o-animation: slideInDown 0.3s;
+  animation: slideInDown 0.3s;
+  backface-visibility: hidden;
+  box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+}
+.cbs-logo img {
+  width: 200px;
+  height: 40px;
+  object-fit: contain;
+  object-position: top;
+}
+.cbs-header-menu {
+  text-align: center;
+}
+a.cbs-toggle span {
+  width: 28px;
+  display: block;
+  height: 3px;
+  background-color: var(--blue-color);
+  margin-bottom: 3px;
+  transition: var(--transition);
+}
+a.cbs-toggle span:nth-child(2){
+  width: 18px;
+}
+ul.cbs-menu li {
+  display: inline-block;
+  transition: var(--transition);
+}
+ul.cbs-menu li a {
+  text-transform: capitalize;
+  font-size: var(--font16);
+  font-weight: var(--font-weight500);
+  color: var(--black-color);
+  padding: 30px 20px;
+  display: block;
+}
+ul.cbs-menu li:hover{
+  transform: translateX(-3px);
+}
+
+/* search css */
+.cbs-search-bar{
+  position: relative;
+}
+.cbs-search-bar input {
+  height: 50px;
+  padding: 10px 53px 10px 10px;
+  width: 100%;
+  border: 1px solid var(--border-color);
+  
+}
+.cbs-search-bar .cbs-search-img a {
+  background: var(--blue-color);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+.cbs-search-bar .cbs-search-img a img{
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  object-position: top;
+}
+/* ========================= banner css start =============================== */
+.cbs-banner-wrapper{
+  background-color: var(--black-color);
+  background-image: url(../images/banner-bg.png);
+  padding: 200px 0px 250px;
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: cover;
+  position: relative;
+}
+/* position img */
+img.cbs-icon1 {
+  position: absolute;
+  left: 260px;
+  top: 120px;
+  animation: 3.2s rotation linear infinite;
+  max-width: 80px;
+  max-height: 80px;
+  min-height: 80px;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+img.cbs-icon1 img{
+  width: 100%;
+  max-width:80px;
+  object-fit: cover;
+  object-position: top;
+  max-height: 80px;
+  min-height: 80px;
+  z-index: 1;
+}
+img.cbs-icon2 {
+  position: absolute;
+  left: 100px;
+  bottom: 170px;
+  animation: 3.4s rotation linear infinite;
+  max-width: 75px;
+  max-height: 75px;
+  min-height: 75px;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+img.cbs-icon2 img{
+  width: 100%;
+  max-width:75px;
+  object-fit: cover;
+  object-position: top;
+  max-height: 75px;
+  min-height: 75px;
+  z-index: 1;
+}
+img.cbs-icon3 {
+  position: absolute;
+  right: 260px;
+  top: 120px;
+  animation: 3.2s rotation linear infinite;
+  max-width: 80px;
+  max-height: 80px;
+  min-height: 80px;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+img.cbs-icon3 img{
+  width: 100%;
+  max-width:78px;
+  object-fit: cover;
+  object-position: top;
+  max-height: 68px;
+  min-height: 68px;
+  z-index: 1;
+}
+img.cbs-icon4 {
+  position: absolute;
+  right: 100px;
+  bottom: 170px;
+  animation: 3.4s rotation linear infinite;
+  max-width: 75px;
+  max-height: 75px;
+  min-height: 75px;
+  object-fit: cover;
+  object-position: top;
+  z-index: 1;
+}
+img.cbs-icon4 img{
+  width: 100%;
+  max-width:71px;
+  object-fit: cover;
+  object-position: top;
+  max-height:75px;
+  min-height: 75px;
+  z-index: 1;
+
+}
+@keyframes rotation {
+  from {
+      -webkit-transform: rotate(0deg) translate(-5px) rotate(0deg);
+      -moz-transform: rotate(0deg) translate(-5px) rotate(0deg);
+      -ms-transform: rotate(0deg) translate(-5px) rotate(0deg);
+      -o-transform: rotate(0deg) translate(-5px) rotate(0deg);
+      transform: rotate(0deg) translate(-5px) rotate(0deg);
+      transition: 1s ease-in-out;
+  }
+  to {
+      -webkit-transform: rotate(360deg) translate(-5px) rotate(-360deg);
+      -moz-transform: rotate(360deg) translate(-5px) rotate(-360deg);
+      -ms-transform: rotate(360deg) translate(-5px) rotate(-360deg);
+      -o-transform: rotate(360deg) translate(-5px) rotate(-360deg);
+      transform: rotate(360deg) translate(-5px) rotate(-360deg);
+      transition: 1s ease-in-out;
+  }
+}
+.cbs-banner-inner {
+  text-align: center;
+}
+.cbs-banner-inner h2 {
+  background-color: var(--blue-color);
+  color: var(--white-color);
+  font-weight: var(--font-weight500);
+  font-size: 24px;
+  display: inline-block;
+  padding: 10px 20px;
+  
+}
+.cbs-banner-inner h1 {
+  color: var(--white-color);
+  font-size: 70px;
+  font-weight: 900;
+  padding: 10px 0 20px;
+}
+.cbs-banner-inner p {
+  color: #ffffff94;
+  font-size: 18px;
+  width: 100%;
+  max-width: 740px;
+  margin: 0 auto;
+}
+.cbs-banner-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 330px;
+  margin: 30px auto 0;
+}
+.cbs-banner-btn a{
+  width: 160px;
+}
+/* banner box */
+.cbs-banner-bottom {
+  padding: 70px 0 0;
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cbs-banner-box {
+  padding: 30px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  transition: var(--transition);
+  text-align: center;
+  box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+}
+.cbs-banner-box img {
+  width: 100%;
+  max-width: 64px;
+  min-height: 64px;
+  max-height: 64px;
+  margin: 0 auto;
+  object-fit: cover;
+  object-position: top;
+  
+}
+.cbs-banner-box h2 a{
+  font-size: var(--font22px);
+  text-transform: capitalize;
+  color: var(--black-color);
+  padding: 20px 0 10px;
+  display: block;
+}
+.cbs-banner-box:hover{
+  transform: translateY(-5px);
+}
+.cbs-banner-box:hover h2 a{
+  color: var(--blue-color);
+}
+/* ========================= about css start ========================== */
+.cbs-about-wrapper {
+  padding: 70px 0 70px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cbs-about-left img {
+  max-width: 636px;
+  max-height: 485px;
+  min-height: 485px;
+  object-fit: cover;
+  object-position: top;
+}
+.cbs-about-content h2 {
+  font-size: var(--font35px);
+  font-weight: var(--font-weight600);
+  color: var(--black-color);
+  padding: 0 0 20px;
+}
+.cbs-about-content p {
+  font-size: var(--font18);
+  padding: 0 0 10px;
+}
+ul.cbs-banner-ul {
+  padding: 0 0 15px;
+}
+ul.cbs-banner-ul li {
+  position: relative;
+  padding: 0 0 10px 30px;
+  font-size: 18px;
+  color: var(--para-color);
+}
+ul.cbs-banner-ul li img {
+  position: absolute;
+  left: 0;
+  top: 2px;
+  max-width: 24px;
+  max-height: 24px;
+  min-height: 24px;
+  object-fit: cover;
+  object-position: top;
+}
+/* ===================== service css start============================ */
+.cbs-service-wrapper {
+  padding: 80px 0px 60px;
+  background-color: var(--light-bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cbs-all-heading {
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto 50px;
+}
+.cbs-all-heading h2{
+  font-size: var(--font35px);
+  color: var(--black-color);
+  padding: 0 0 15px;
+  text-transform: capitalize;
+}
+.cbs-all-heading p{
+  font-size: var(--font18);
+  
+}
+.cbs-service-box {
+  background-color: var(--white-color);
+  transition: var(--transition);
+  padding: 10px;
+  
+  margin-bottom: 20px;
+  text-align: center;
+  box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+}
+.cbs-service-box img {
+  max-width: 290px;
+  max-height: 270px;
+  min-height: 270px;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+.cbs-service-content {
+  padding: 20px 0px 15px;
+}
+.cbs-service-content > h2 > a{
+  color: var(--black-color);
+  font-size: 22px;
+  padding: 0px 0px 10px;
+  display: block;
+  transition: var(--transition);
+}
+.cbs-service-content p{
+  color: var(--para-color);
+}
+.cbs-service-content > a {
+  margin: 20px auto 0;
+}
+.cbs-service-box:hover{
+  transform: translateY(-5px);
+}
+.cbs-service-box:hover .cbs-service-content > h2 > a{
+  color: var(--blue-color);
+}
+/* ====================== team css start =========================== */
+.cbs-team-wrapper{
+  padding: 80px 0px 50px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cbs-team-box{
+  position: relative;
+  transition: var(--transition);
+  margin-bottom: 30px;
+}
+.cbs-team-box img {
+  width: 100%;
+  max-height: 396px;
+  min-height: 396px;
+  object-position: top;
+  object-fit: cover;
+  max-width: 306px;
+}
+.cbs-team-content {
+  text-align: center;
+  box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0px;
+  
+}
+.cbs-team-content h2{
+  font-size: var(--font22px);
+  transition: var(--transition);
+}
+.cbs-team-content p{
+  font-size: var(--font18);
+  padding: 5px 0 0 0;
+}
+.cbs-team-box:hover{
+  transform: translateY(-5px);
+}
+.cbs-team-box:hover .cbs-team-content h2{
+    color: var(--blue-color);
+}
+/* ========================= pricing table css start ============================ */
+.cbs-pricing-wrapper {
+  padding: 80px 0px 60px;
+  background-color: var(--light-bg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cbs-pricing-box {
+  box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+  background-color: #ffffff;
+  
+  padding-bottom: 40px;
+  transition: var(--transition);
+  margin-bottom: 20px;
+}
+.cbs-pricing-box:hover{
+  transform: translateY(-5px);
+}
+.cbs-heading-box {
+  text-align: center;
+  background: var(--blue-color);
+  padding: 10px 20px 15px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.cbs-heading-box h1 {
+  font-size: var(--font18px);
+  color: var(--black-color);
+  text-transform: capitalize;
+  background-color: #e6eeff;
+  display: inline-block;
+  padding: 10px 20px;
+  max-width: 130px;
+  width: 100%;
+  
+}
+.cbs-heading-box h2 {
+  color: var(--white-color);
+  font-size: var(--font25px);
+  padding: 0px 0px 10px;
+  text-transform: capitalize;
+}
+
+ul.cbs-pricing-list {
+  padding: 40px 50px 0;
+}
+ul.cbs-pricing-list li {
+  position: relative;
+  padding: 0px 0px 20px 30px;
+  border-bottom: 1px solid #cccccc4d;
+  margin-bottom: 20px;
+}
+ul.cbs-pricing-list li img {
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 16px;
+  min-height: 16px;
+  max-height: 16px;
+  object-fit: cover;
+  object-position: top;
+}
+.cbs-pricing-box a {
+  margin: 0 auto;
+}
+/* ==================== blog css start ============================ */
+.cbs-blog-wrapper{
+  padding: 80px 0px 60px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.cbs-blog-box {
+  position: relative;
+  margin-bottom: 20px;
+  transition: var(--transition);
+  box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+  padding: 10px 10px;
+  background-color: #ffffff;
+
+}
+.cbs-blog-box:hover{
+  transform: translateY(-5px);
+}
+.cbs-blog-box img {
+  max-width: 395px;
+  max-height: 300px;
+  min-height: 300px;
+  object-fit: cover;
+  object-position: top;
+  width: 100%;
+}
+.cbs-blog-content {
+  padding: 20px 30px 20px;
+}
+.cbs-blog-content h2 a{
+  color: var(--black-color);
+  font-size: 22px;
+  transition: var(--transition);
+}
+.cbs-blog-box:hover h2 a{
+  color: var(--blue-color);
+}
+.cbs-blog-content p {
+  font-size: 16px;
+  color: var(--para-color);
+  padding: 10px 40px 10px 0;
+}
+.cbs-blog-content a{
+  font-weight: var(--font-weight500);
+  font-size: var(--font18);
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+
+/* ===================== footer css start ======================== */
+.cbs-footer-wrapper{
+  padding: 80px 0px 50px;
+  background-image: url(../images/footer.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.cbs-footer-sec1 {
+  padding: 0px 0px 30px;
+}
+.cbs-footer-sec1 > a > img {
+  width: 202px;
+  height: 41px;
+  object-fit: contain;
+  object-position: top;
+}
+.cbs-footer-sec1 p {
+  color: var(--white-color);
+  font-size: 16px;
+  padding: 20px 0 0 0;
+}
+.cbs-footer-sec2.cbs-sec2-padding {
+  padding: 0 0 30px 70px;
+}
+.cbs-follow-us-footer h5 {
+  color: #ffffff;
+  font-size: var(--font18px);
+  padding: 10px 0px 10px;
+  text-transform: capitalize;
+}
+.cbs-follow-us-footer ul {
+  display: flex;
+  align-items: center;
+}
+.cbs-follow-us-footer ul li {
+  width: 40px;
+  height: 40px;
+  background: var(--white-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+.cbs-follow-us-footer ul li img {
+  width: 20px;
+  min-height: 20px;
+  object-fit: contain;
+  object-position: top;
+}
+.cbs-follow-us-footer ul li:hover{
+  transform: translateY(-5px);
+}
+.cbs-footer-sec2 h2 {
+  font-size: 22px;
+  color: #ffffff;
+  text-transform: capitalize;
+  padding: 0px 0px 20px;
+}
+ul.cbs-footer-links li {
+  position: relative;
+  padding: 0px 0px 5px 30px;
+  transition: var(--transition);
+}
+ul.cbs-footer-links li:hover{
+  transform: translateX(-5px);
+}
+ul.cbs-footer-links li img {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 16px;
+  max-height: 16px;
+  min-height: 16px;
+  object-fit: cover;
+  object-position: top;
+}
+ul.cbs-footer-links li a {
+  color: var(--white-color);
+  font-size: var(--font16);
+  text-transform: capitalize;
+}
+ul.cba-get-in-touch li {
+  position: relative;
+  padding: 0px 0px 15px 50px;
+  color: var(--white-color);
+  font-size: var(--font16);
+}
+ul.cba-get-in-touch li:last-child{
+  padding-bottom: 0;
+}
+ul.cba-get-in-touch li img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 24px;
+  max-height: 24px;
+  min-height: 24px;
+  object-fit: cover;
+  object-position: top;
+}
+.cbs-copywrite-wrapper {
+  text-align: center;
+  padding: 10px 0px;
+  background-color: var(--blue-color);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.cbs-copywrite-wrapper p{
+  color: var(--white-color);
+  font-size: var(--font18);
+}
+.cbs-footer-sec2.cbsNewsletter {
+  background-color: #0243c545;
+  padding: 20px 20px;
+}
+.cbs-footer-sec2.cbsNewsletter h2 {
+  padding: 0;
+}
+.cbs-footer-sec2.cbsNewsletter p {
+  color: #ffffff7d;
+  padding: 5px 0px 10px;
+}
+/* newsletter css */
+.as-newsletterFormCustom {
+  position: relative;
+}
+.as-newsletterFormCustom .mt_form_input input {
+  width: 100%;
+  height: 50px;
+  padding: 0px 20px 0 20px;
+  border: none;
+}
+.as-newsletterFormCustom button {
+  height: 50px;
+  width: 100%;
+  border: none;
+  background-color: var(--blue-color);
+  color: #ffffff;
+  font-size: 18px;
+  text-transform: capitalize;
+  margin: 12px 0 0;
+}
+/* goto top section */
+.cbs_top_icon a {
+  display: flex;
+  width: 50px;
+  height: 50px;
+  background-color: var(--blue-color);
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  position: fixed;
+  bottom: 30px;
+  right: 20px;
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1000;
+  cursor: pointer;
+  animation: 3s installation infinite alternate;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.cbs_top_icon a img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  object-position: top;
+  transform: rotate(180deg);
+}
+.cbs_top_icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+@keyframes installation {
+	0% {
+		transform: translateY(0px);
+	}
+	50% {
+		transform: translateY(-20px);
+	}
+}
+/* =========================== media css start =============================== */
+@media(max-width:1400px){
+  ul.cbs-menu li a {
+    padding: 30px 10px;
+  }
+}
+@media(max-width:1200px){
+  body.menu-open .cbs-header-overlay {
+    opacity: 1;
+    visibility: visible;
+}
+  body.menu-open ul.cbs-menu {
+    left: 0;
+}
+.cbs-res-toggle {
+  display: block;
+  position: absolute;
+  right: 290px;
+  top: 35px;
+  z-index: 2;
+}
+  .cbs-main-header-wrapepr {
+    position: relative;
+    padding: 20px 50px;
+}
+  ul.cbs-menu {
+    background-color: var(--blue-color);
+    position: fixed;
+    left: -300px;
+    top: 0;
+    width: 300px;
+    z-index: 999;
+    height: 100vh;
+    transition: var(--transition);
+}
+  ul.cbs-menu li {
+    text-align: left;
+    display: block;
+    padding: 20px 20px 0px 20px;
+  }
+  ul.cbs-menu li a {
+    padding: 0;
+    font-size: 18px;
+    color: #ffffff;
+  }
+  .cbs-top-flex {
+    display: block;
+    text-align: center;
+  }
+  .cbs-ton-text {
+    padding: 10px 0px 0px 15px;
+  }
+  .cbs-banner-position {
+    display: none;
+}
+}
+@media(max-width:991px){
+  .cbs-res-toggle {
+    right: 20px;
+    top: 40px;
+}
+  .cbs-main-header-wrapepr {
+    position: relative;
+    padding: 20px 0px;
+}
+  .cbs-search-bar {
+    position: absolute;
+    right: 0;
+    top: 22px;
+    margin-right: 90px;
+  }
+  .cbs-top-social ul {
+    margin: 20px auto 0;
+  }
+    .cbs-footer-sec2 {
+      padding: 0 0 20px 0;
+  }
+  .cbs-footer-sec2.cbs-sec2-padding {
+    padding: 0 0 20px 0px;
+  }
+  .cbs-about-content {
+    padding: 30px 0 0 0;
+  }
+  .cbs-top-flex {
+    border-left: none;
+    box-shadow: 0px 11px 61px 3px rgba(34, 34, 34, 0.09);
+    padding: 30px 30px;
+    margin: 0px 10px 20px;
+    
+  }
+.cbs-top-right {
+  justify-content: center;
+  padding: 20px 0 0 0;
+}
+}
+@media(max-width:767px){
+  .cbs-team-box img {
+    max-width: 100%;
+}
+.cbs-about-left img {
+  max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
+}
+  .cbs-top-icon{
+    display: none;
+  }
+  .cbs-banner-bottom {
+    margin: 0;
+    padding: 80px 0px 0px 0px;
+}
+.cbs-banner-wrapper {
+  padding: 80px 0px 80px;
+}
+.cbs-top-flex {
+  box-shadow: none;
+  padding: 0;
+}
+.cbs-top-header {
+  padding: 0;
+}
+.cbs-ton-text {
+  padding: 10px 0px 0px 0px;
+}
+.cbs-search-bar {
+  display: none;
+}
+
+}
+@media(max-width:580px){
+  .cbs-res-toggle {
+    right: 20px;
+    top: 30px;
+}
+  .cbs-logo {
+    width: 100%;
+    max-width: 160px;
+}
+  .cbs-main-header-wrapepr {
+    padding: 20px 0;
+}
+  .cbs-ton-text h2 {
+    font-size: 15px;
+}
+  .cbs-banner-bottom {
+    padding: 40px 0px 0px 0px;
+  }
+  .cbs-about-wrapper {
+    padding: 20px 0 40px;
+  }
+  .cbs-service-wrapper {
+    padding: 40px 0px 30px;
+  }
+  .cbs-team-wrapper {
+    padding: 40px 0px 20px;
+  }
+  .cbs-pricing-wrapper {
+    padding: 40px 0px 30px;
+  }
+  .cbs-blog-wrapper {
+    padding: 40px 0px 30px;
+  }
+  .cbs-footer-wrapper {
+    padding: 40px 0px 20px;
+  }
+  .cbs-banner-wrapper {
+    padding: 40px 0px 40px;
+  }
+  .cbs-banner-inner h1 {
+    font-size: 50px;
+  }
+}
+@media(max-width:480px){
+  .cbs-banner-inner h2 {
+    padding: 10px 10px;
+}
+  ul.cbs-menu {
+    width: 250px;
+  }
+  .cbs-ton-text p {
+    display: none;
+  }
+  .cbs-top-right {
+    display: inline-flex;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 0 15px;
+  }
+  .cbs-banner-inner h1 {
+    font-size: 30px;
+  }
+  .cbs-banner-inner p {
+    font-size: 16px;
+  }
+  .cbs-banner-inner h2 {
+    font-size: 18px;
+  }
+  .cbs-banner-btn {
+    margin: 20px auto 0;
+    max-width: 275px;
+  }
+  .cbs-banner-box h2 a {
+    font-size: 20px;
+  }
+  .cbs-about-content h2 {
+    font-size: 24px;
+  }
+  .cbs-all-heading h2 {
+    font-size: 25px;
+    padding: 0 0 10px;
+  }
+  .cbs-all-heading p {
+    font-size: 16px;
+  }
+  .cbs-all-heading {
+    margin: 0 auto 40px;
+  }
+  .cbs-service-box > h2 > a {
+    font-size: 20px;
+  }
+  .cbs-team-content h2 {
+    font-size: 20px;
+  }
+  ul.cbs-pricing-list {
+    padding: 40px 20px 0;
+  }
+  .cbs-blog-content {
+    text-align: center;
+  }
+  .cbs-blog-content {
+    padding: 20px 10px 20px;
+}
+.cbs-blog-content h2 a {
+  font-size: 18px;
+}
+  a.cbs-all-btn {
+    height: 40px;
+    max-width: 130px;
+  }
+  .cbs-top-flex {
+    margin: 0px 10px 0px;
+  }
+  .cbs-top-social ul {
+    display: block;
+    max-width: 200px;
+  }
+  .cbs-top-social ul li {
+    display: inline-block;
+  }
+  .cbs-top-social ul li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background: #0243c521;
+  }
+  .cbs-ton-text h2 {
+    font-size: 18px;
+  }
+  .cbs-copywrite-wrapper p {
+    font-size: 16px;
+  }
+}
+
+
+
+
+
+
+
+
+
+

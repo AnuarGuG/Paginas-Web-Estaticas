@@ -1,0 +1,752 @@
+/*
+[Master Stylesheet] 
+Project: Villa Delight Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Infant:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --pxj-primary-color:#8b3c7f;
+    --pxj-white-color: #ffffff;
+    --pxj-black-color: #000000;
+    --pxj-font-color: #5c5c5c;
+    --pxj-transition: all 0.3s;
+    --pxj-box-shadow: 0 0 20px 0 rgba(139, 60, 127, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--pxj-font-color);
+}
+
+a, a:hover, a:focus, button, button:hover, button:focus{	
+	text-decoration: none;
+	-webkit-transition: var(--pxj-transition);
+    -moz-transition: var(--pxj-transition);
+    -ms-transition: var(--pxj-transition);
+    -o-transition: var(--pxj-transition);
+    transition: var(--pxj-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--pxj-transition);
+    -moz-transition: var(--pxj-transition);
+    -ms-transition: var(--pxj-transition);
+    -o-transition: var(--pxj-transition);
+    transition: var(--pxj-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    font-family: 'Cormorant Infant', serif;
+    text-transform: capitalize;
+    color: var(--pxj-primary-color);
+}
+
+h6{
+    font-size: 16px;
+    font-weight: 600;
+}
+h5 {
+    font-size: 26px;
+    font-weight: 600;
+}
+h4{
+    font-size: 44px;
+    font-weight: 600;
+}
+
+
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 70px 0;
+}
+
+.row{
+    row-gap: 24px;
+}
+
+.pxj_section_heading {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.pxj_section_heading h6 {
+    color: var(--pxj-black-color);
+}
+
+/********************************************************
+    Button Style
+ *******************************************************/
+
+.pxj_btn {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--pxj-primary-color);
+    color: var(--pxj-white-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    padding: 10px;
+    min-height: 50px;
+    min-width: 125px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+    border-radius: 0 15px;
+}
+
+.pxj_btn:hover{
+    color: var(--pxj-primary-color);
+    background-color: transparent;
+    border: 1px solid var(--pxj-primary-color);
+}
+
+.pxj_btn:after {
+  content: "";
+  background-color: rgba(255, 255, 255, 0.5);
+  display: block;
+  position: absolute;
+  padding-top: 300%;
+  padding-left: 350%;
+  margin-left: -20px;
+  margin-top: -120%;
+  opacity: 0;
+  transition: all 0.8s
+}
+
+.pxj_btn:hover:after {
+  padding: 0;
+  margin: 0;
+  opacity: 1;
+  transition: 0s
+}
+
+
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.pxj_top_icon a {
+    display: flex;
+    background-color: var(--pxj-primary-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--pxj-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 1000;
+    animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+
+.pxj_top_icon a:active {
+  background-color: var(--pxj-font-color);
+}
+.pxj_top_icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebebeb;
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Banner Section Style
+ *******************************************************/
+.pxj_banner_wrapper{
+    position: relative;
+}
+
+.pxj_slide1,
+.pxj_slide2,
+.pxj_slide3,
+.pxj_slide4,
+.pxj_slide5{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.pxj_slide1{
+    background-image: url(../images/slide-1.jpg);
+}
+.pxj_slide2{
+    background-image: url(../images/slide-2.jpg);
+}
+.pxj_slide3{
+    background-image: url(../images/slide-3.jpg);
+}
+.pxj_slide4{
+    background-image: url(../images/slide-4.jpg);
+}
+
+.pxj_slide5{
+    background-image: url(../images/slide-5.jpg);
+}
+
+.pxj_banner_content {
+    text-align: center;
+    width: 100%;
+    height: calc(100vh - 30px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    position: relative;
+    border: 2px solid #fff;
+    margin: 15px 0;
+    border-radius: 0 70px;
+}
+
+.pxj_banner_text {
+    max-width: 820px;
+    padding: 0 15px;
+}
+
+.pxj_banner_content h3 {
+    font-size: 50px;
+    color: var(--pxj-white-color);
+    margin-bottom: 15px;
+}
+
+.pxj_banner_content p {
+    font-size: 20px;
+    color: var(--pxj-white-color);
+    letter-spacing: 1.5px;
+    text-transform: capitalize;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    color: var(--pxj-white-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--pxj-transition);
+}
+
+.swiper:hover .swiper-button-prev, .swiper:hover .swiper-button-next{
+    opacity: 1;
+    visibility: visible;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 30px;
+}
+
+.pxj_banner_wrapper .swiper-button-prev{
+    left: 20px;
+}
+
+.pxj_banner_wrapper .swiper-button-next {
+    right: 20px;
+}
+
+/********************************************************
+    Header Section Style
+********************************************************/
+
+.pxj_logo {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    margin-left: 50px;
+}
+
+.pxj_logo img {
+    position: relative;
+    z-index: 1;
+    max-height: 50px;
+}
+
+.pxj_toggle {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    cursor: pointer;
+}
+
+.pxj_toggle span {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: rgb(0 0 0 / 30%);
+    padding: 10px;
+    z-index: 1;
+    position: relative;
+}
+
+.pxj_toggle span p {
+    color: var(--pxj-white-color);
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.pxj_menu {
+    position: fixed;
+    left: -250px;
+    flex-direction: column;
+    top: 0;
+    display: flex;
+    height: 100vh;
+    background-color: var(--pxj-white-color);
+    width: 250px;
+    padding: 50px 30px;
+    z-index: 111;
+    transition: all 0.5s;
+    gap: 20px;
+}
+
+.menu-open .pxj_menu {
+    left: 0;
+}
+
+.pxj_body_overlay {
+    position: fixed;
+    background: rgb(0 0 0 / 40%);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    cursor: zoom-in;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.menu-open .pxj_body_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+.pxj_menu li a {
+    color: var(--pxj-font-color);
+}
+
+.pxj_menu li a:hover {
+    color: var(--pxj-primary-color);
+}
+
+/********************************************************
+    About Section Style
+********************************************************/
+
+.pxj_about_wrapper {
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.pxj_about_box h5 {
+    margin: 10px 0 5px;
+}
+
+.pxj_about_box {
+    text-align: center;
+    max-width: 320px;
+    margin: auto;
+}
+
+/********************************************************
+    Team Section Style
+********************************************************/
+
+.pxj_team_wrapper, .pxj_portfolio_wrapper, .pxj_contact_wrapper, .pxj_copyright_wrapper{
+    background-color: #fff9f5;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pxj_team_box {
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--pxj-white-color);
+    box-shadow: var(--pxj-box-shadow);
+}
+
+.pxj_team_img {
+    max-height: 266px;
+    overflow: hidden;
+    position: relative;
+}
+
+.pxj_team_img img {
+    min-height: 266px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.pxj_team_social {
+    position: absolute;
+    bottom: -55px;
+    left: 0;
+    background-color: rgb(139 60 127 / 80%);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    transition: var(--pxj-transition);
+}
+
+.pxj_team_social a img {
+    min-height: fit-content;
+    width: 16px;
+    object-fit: contain;
+}
+
+.pxj_team_box:hover .pxj_team_social{
+    bottom: 15px;
+}
+
+.pxj_team_social a {
+    padding: 15px 0;
+}
+
+.pxj_team_text {
+    padding: 15px;
+}
+
+.pxj_team_text p {
+    margin-top: 10px;
+}
+
+.pxj_team_text h6{
+    color: var(--pxj-black-color);
+}
+
+.pxj_team_btn a, .pxj_service_btn a, .pxj_testi_btn a{
+    margin: auto;
+}
+
+/********************************************************
+    Service Section Style
+********************************************************/
+
+.pxj_service_wrapper, .pxj_testi_wrapper{
+    background-image: url(../images/section-bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.pxj_service_wrapper .pxj_section_heading h6,
+.pxj_testi_wrapper .pxj_section_heading h6,
+.pxj_service_wrapper .pxj_section_heading h4,
+.pxj_testi_wrapper .pxj_section_heading h4{
+    color: var(--pxj-white-color);
+}
+
+.pxj_service_wrapper .pxj_btn:hover,
+.pxj_testi_wrapper .pxj_btn:hover{
+    border: 1px solid var(--pxj-white-color);
+    color: var(--pxj-white-color);
+}
+
+.pxj_service_box {
+    text-align: center;
+    border-radius: 8px;
+    background-color: var(--pxj-white-color);
+    box-shadow: var(--pxj-box-shadow);
+    padding: 30px 15px;
+}
+
+.pxj_service_text {
+    margin-top: 30px;
+}
+
+.pxj_service_text p {
+    margin: 7px 0 15px;
+}
+
+.pxj_service_text a {
+    color: var(--pxj-black-color);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Cormorant Infant', serif;
+}
+
+.pxj_service_text a:hover{
+    color: var(--pxj-primary-color);
+}
+
+/********************************************************
+    Portfolio Section Style
+********************************************************/
+
+.gallery-top {
+    margin-bottom: 5px;
+}
+
+.pxj_portfolio_img img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 700px;
+    min-height: 700px;
+    object-position: top;
+    height: 100%;
+}
+
+.gallery-thumbs .pxj_portfolio_img img{
+    min-height: 150px;
+    max-height: 150px;
+}
+
+.gallery-thumbs .swiper-slide{
+    opacity: .5;
+}
+
+.gallery-thumbs .swiper-slide.swiper-slide-active{
+    opacity: 1;
+}
+
+/********************************************************
+    Testimonial Section Style
+********************************************************/
+
+.pxj_client_info {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 15px;
+    gap: 15px;
+}
+
+.pxj_client_img {
+    width: 120px;
+    min-width: 120px;
+    height: 120px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.pxj_client_img img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    object-fit: cover;
+    min-height: 120px;
+}
+
+.pxj_client_name h6 {
+    color: var(--pxj-white-color);
+}
+.pxj_client_name h5 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    font-size: 24px;
+    color: var(--pxj-white-color);
+}
+.pxj_testi_box {
+    border-radius: 8px;
+    background-color: var(--pxj-white-color);
+    box-shadow: var(--pxj-box-shadow);
+    padding: 10px 20px 20px;
+    margin-top: -60px;
+}
+
+.pxj_rating {
+    text-align: right;
+}
+
+.pxj_testi_text {
+    margin-top: 40px;
+}
+
+/********************************************************
+    Contact Section Style
+********************************************************/
+
+.pxj_contact_wrapper .pxj_section_heading{
+    text-align: left;
+}
+
+.pxj_contact_info {
+    margin-top: 30px;
+}
+
+.pxj_contact_info li {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.pxj_contact_info li:last-child{
+    margin-bottom: 0;
+}
+
+.pxj_contact_info li span {
+    min-width: 35px;
+    height: 35px;
+    border: 1px solid var(--pxj-primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.pxj_contact_info li a{
+    color: var(--pxj-font-color);
+}
+
+.pxj_contact_form .pxj_textarea{
+    margin-bottom: 15px;
+}
+.pxj_contact_form .pxj_textarea, .pxj_contact_form .pxj_textarea textarea{
+    width: 100%;
+}
+
+.pxj_contact_form .pxj_textarea textarea {
+    border: 1px solid #ebebeb;
+    height: 150px;
+    background-color: #ffffff;
+    padding: 10px;
+    resize: none;
+}
+
+.pxj_input {
+    display: flex;
+    gap: 15px;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.pxj_input .mt_form_input {
+    min-width: calc( 100% / 3 - 10px );
+}
+
+.pxj_input .mt_form_input input{
+    width: 100%;
+    border: 1px solid #ebebeb;
+    height: 45px;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+
+.pxj_contact_btn {
+    display: flex;
+    justify-content: end;
+    margin-top: 20px;
+}
+
+/********************************************************
+    Copyright Section Style
+********************************************************/
+
+.pxj_copyright_wrapper{
+    border-top: 1px solid #ebebeb;
+}
+
+.pxj_copyright_content {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.pxj_copyright_content ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.pxj_copyright_content ul li:first-child {
+    padding-left: 0;
+}
+
+.pxj_copyright_content ul li {
+    padding: 0 30px;
+}
+
+.pxj_copyright_content ul li a {
+    color: var(--pxj-font-color);
+}
+
+.pxj_copyright_content p {
+    color: var(--pxj-font-color);
+    text-transform: capitalize;
+}

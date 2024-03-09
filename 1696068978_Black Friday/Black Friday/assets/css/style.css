@@ -1,0 +1,846 @@
+/*
+[Master Stylesheet] 
+Project: Black Friday Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Tangerine:wght@400;700&display=swap');
+
+:root {
+    --fri-primary-color:#c00011;
+    --fri-black-color: #000000;
+    --fri-black-light: #222222;
+    --fri-white-color: #ffffff;
+    --fri-transition: all 0.3s;
+    --fri-border-radius: 8px;
+    --fri-box-shadow: 0 7px 21px rgba(0,0,0,.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--fri-white-color);
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: var(--fri-font-color);
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--fri-primary-color);
+    width: 4px;
+}
+
+a, a:hover, a:focus, button, button:hover, button:focus{	
+	text-decoration: none;
+	-webkit-transition: var(--fri-transition);
+    -moz-transition: var(--fri-transition);
+    -ms-transition: var(--fri-transition);
+    -o-transition: var(--fri-transition);
+    transition: var(--fri-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--fri-transition);
+    -moz-transition: var(--fri-transition);
+    -ms-transition: var(--fri-transition);
+    -o-transition: var(--fri-transition);
+    transition: var(--fri-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    text-transform: capitalize;
+}
+h6{
+    
+}
+h5 {
+    font-size: 30px;
+    font-weight: 500;
+}
+h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+h3{
+    font-size: 50px;
+    font-weight: 400;
+}
+
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 70px 0;
+}
+
+.row{
+    row-gap: 24px;
+}
+
+.fri_section_heading {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--fri-black-light);
+    align-items: center;
+    padding: 20px 15px;
+    border-radius: var(--fri-border-radius);
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fri_section_heading span {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fri_section_heading h5 {
+    font-size: 20px;
+}
+
+.fri_section_heading a {
+    color: var(--fri-white-color);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+}
+
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.fri-top-icon a {
+    display: flex;
+    background-color: var(--fri-primary-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--fri-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 1000;
+    animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+
+.fri-top-icon a:active {
+  background-color: var(--fri-font-light);
+}
+.fri-top-icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fri-white-color);
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Button Style
+ *******************************************************/
+
+.fri_btn {
+    background-color: var(--fri-primary-color);
+    color: var(--fri-white-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 28px;
+    padding: 10px;
+    min-height: 40px;
+    min-width: 140px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid transparent;
+}
+
+.fri_btn:hover{
+    background-color: transparent;
+    color: var(--fri-white-color);
+    border: 1px solid var(--fri-primary-color);
+}
+
+/********************************************************
+    Pre Header Section Style
+*******************************************************/
+
+.fri_preheader_wrapper {
+    background-color: var(--fri-primary-color);
+    padding: 15px 0;
+}
+
+.fri_pre_content {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.fri_announcement, .fri_pre_social {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.fri_pre_social li a {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: var(--fri-black-light);
+    transition: var(--fri-transition);
+}
+
+.fri_pre_social li a:hover {    
+    transform: translateY(-2px);
+}
+
+/********************************************************
+    Header Section Style
+*******************************************************/
+
+.pp-header-wrapper {
+    background-color: rgb(34 34 34 / 50%);
+    width: 100%;
+    min-height: 100px;
+    padding: 25px 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: .5s cubic-bezier(.25,.8,.25,1) 0.05s;
+}
+
+.pp-header-wrapper.pp-header-fixed{
+    position: fixed;
+    top: 0;
+    animation: goDown 0.5s ease-in-out forwards;
+    background-color: rgb(34 34 34 / 100%);
+}
+
+@keyframes goDown {
+  0%{
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.fri_header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.fri_logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.fri_logo a img {
+    object-position: left;
+}
+
+.fri_toggle_menu {
+    display: none; 
+    cursor: pointer;
+}
+
+.fri_menu {
+    display: flex;
+    gap: 70px;
+}
+
+.fri_menu li a {
+    transition: var(--fri-transition);
+    color: var(--fri-font-color);
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.fri_menu li a:hover {
+    color: var(--fri-primary-color);
+}
+
+.fri_body_overlay{
+    position: fixed;
+    background: rgb(0 0 0 / 40%);
+    height: 100vh;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    cursor: zoom-in;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.menu-open .fri_body_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    Banner Section Style
+*******************************************************/
+
+.fri_banner_wrapper {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/banner-bg.jpg);
+    position: relative;
+}
+
+.fri_banner_content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 230px 0 150px;
+}
+
+.fri_banner_text h1 {
+    font-size: 110px;
+    font-weight: 700;
+    color: var(--fri-primary-color);
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+.fri_banner_text h3 {
+    font-family: 'Tangerine', cursive;
+    font-size: 110px;
+}
+
+.fri_banner_offer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: -25px 0 25px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.fri_banner_offer h4, .fri_banner_offer h5 {
+    color: var(--fri-primary-color);
+    font-weight: 700;
+}
+
+/********************************************************
+    Category Section Style
+*******************************************************/
+
+.fri_category_wrapper, .fri_coupons_wrapper, .fri_blogs_wrapper{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-image: url(../images/sec_bg.jpg);
+    background-attachment: fixed;
+    position: relative;   
+}
+
+.fri_cate_link {
+    text-align: center;
+    color: var(--fri-white-color);
+}
+
+.fri_cate_link:hover{
+    color: var(--fri-white-color);
+}
+
+.fri_cate_img {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    border: 1px solid var(--fri-white-color);
+    border-radius: 50%;
+    transition: all 1s;
+}
+
+.fri_cate_link:hover .fri_cate_img{
+    transform: rotateY(360deg);
+}
+
+.fri_cate_link p{
+    margin-top: 15px;
+}
+
+/********************************************************
+    Offer Section Style
+*******************************************************/
+
+.fri_offer_wrapper, .fri_deals_wrapper, .fri_footer_wrapper{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: var(--fri-black-color);
+}
+
+.fri_offer_box {
+    background-color: var(--fri-black-light);
+    padding: 30px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.fri_offer_img img{
+    transition: var(--fri-transition);
+}
+
+.fri_offer_box:hover .fri_offer_img img{
+    transform: scale(1.1);
+}
+
+.fri_sale_name h5{
+    color: var(--fri-primary-color);
+}
+.fri_sale_title {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.fri_sale_title span {
+    font-size: 30px;
+}
+
+.fri_offer_box p {
+    margin: 30px 0 15px;
+    white-space: nowrap;
+}
+
+.fri_offer_btn a{
+    margin: auto;
+}
+
+/********************************************************
+    Coupons Section Style
+*******************************************************/
+
+.fri_coupon_box {
+    background-color: var(--fri-black-color);
+    box-shadow: var(--fri-box-shadow);
+    border-radius: var(--fri-border-radius);
+    padding: 20px 20px 30px;
+}
+
+.fri_coupon_thumb {
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fri-black-light);
+    border-radius: var(--fri-border-radius);
+    position: relative;
+}
+
+.fri_coupon_thumb img {
+    transition: var(--fri-transition);
+    padding: 10px;
+    max-width: 320px;
+    max-height: 200px;
+}
+
+.fri_coupon_box:hover .fri_coupon_thumb img {
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.fri_coupon_text {
+    margin: 30px 0 15px;
+    border-top: 1px dashed rgb(255 255 255 / 40%);
+    padding-top: 30px;
+    position: relative;
+}
+
+.fri_cut_img {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.fri_coupon_text p {
+    margin-bottom: 5px;
+}
+
+.fri_store {
+    display: flex;
+    gap: 5px;
+}
+
+.fri_store span {
+    color: var(--fri-primary-color);
+    font-weight: 600;
+}
+
+/********************************************************
+    Deals Section Style
+*******************************************************/
+
+.fri_deal_box {
+    background-color: var(--fri-black-light);
+    box-shadow: var(--fri-box-shadow);
+    border-radius: var(--fri-border-radius);
+    padding: 20px 20px 30px;
+}
+
+.fri_deal_thumb {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fri-black-color);
+    border-radius: var(--fri-border-radius);
+    padding: 20px;
+    max-height: 320px;
+}
+
+.fri_deal_thumb img {
+    transition: var(--fri-transition);
+    min-height: 320px;
+    object-fit: contain;
+}
+
+.fri_deal_box:hover .fri_deal_thumb img{
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.fri_deal_text {
+    border-bottom: 1px dashed rgb(255 255 255 / 40%);
+    padding: 20px 0 10px;
+}
+
+.fri_deal_price {
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.fri_deal_amt {
+    display: flex;
+    gap: 10px;
+}
+
+.fri_deal_amt p {
+    font-size: 16px;
+}
+
+.fri_deal_amt span{
+    text-decoration: line-through;
+    font-size: 16px;
+}
+
+.fri_deal_text .fri_store {
+    margin: 5px 0;
+}
+
+/********************************************************
+    Blogs Section Style
+*******************************************************/
+
+.fri_blogs_wrapper {
+    margin-bottom: -90px;
+    padding-bottom: 160px;
+}
+
+.fri_blog_box {
+    background-color: var(--fri-black-color);
+    box-shadow: var(--fri-box-shadow);
+    border-radius: var(--fri-border-radius);
+    overflow: hidden;
+}
+
+.fri_blog_img {
+    max-height: 240px;
+    overflow: hidden;
+}
+
+.fri_blog_img img {
+    transition: var(--fri-transition);
+    min-height: 240px;
+}
+
+.fri_blog_box:hover .fri_blog_img img{
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.fri_blog_info {
+    padding: 30px 20px;
+}
+
+.fri_blog_date {
+    display: flex;
+    gap: 5px 10px;
+    align-items: center;
+    margin: 10px 0;
+    flex-wrap: wrap;
+}
+
+.fri_blog_date span {
+    display: flex;
+    gap: 7px;
+    align-items: center;
+}
+
+.fri_blog_text {
+    margin-bottom: 20px;
+}
+
+/********************************************************
+    Newslatter Section Style
+ *******************************************************/
+
+.fri_news_wrapper {
+    background-color: var(--fri-black-light);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 20px;
+    max-width: 1160px;
+    margin: auto;
+    border-radius: var(--fri-border-radius);
+    position: relative;
+    max-height: 180px;
+}
+
+.fri_newslatter {
+    position: relative;
+}
+
+.fri_news_wrapper .mt_form_input {
+    margin-bottom: 15px;
+}
+
+.fri_news_wrapper .mt_form_input:last-child {
+    margin: 0;
+}
+
+.fri_news_wrapper form label {
+    color: var(--fri-white-color);
+    margin: 0 0 10px 20px;
+}
+
+.fri_news_wrapper .mt_form_input input {
+    padding: 0px 135px 0 20px;
+    position: relative;
+    outline: none;
+    border: 1px solid rgb(255 255 255 / 10%);
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: var(--fri-white-color);
+}
+
+.fri_newslatter button {
+    position: absolute;
+    top: 34px;
+    right: 3px;
+    min-height: 44px;
+    border-radius: 23px;
+    background-color: var(--fri-primary-color);
+    color: var(--fri-white-color);
+}
+
+.fri_newslatter button:hover{
+    background-color: transparent;
+    color: var(--fri-primary-color);
+}
+
+/********************************************************
+    Footer Section Style
+ *******************************************************/
+
+.fri_footer_wrapper{
+    margin-top: -90px;
+    padding-top: 160px;
+}
+
+.fri_footer_logo a img {
+    object-position: left;
+}
+
+.fri_footer_text p {
+    margin: 15px 0;
+    max-width: 350px;
+}
+
+.fri_footer_text ul{
+    display: flex;
+    gap: 10px;
+}
+
+.fri_footer_text ul li a{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--fri-primary-color);
+}
+
+.fri_footer_text ul li a img{
+    transition: var(--fri-transition);
+}
+
+.fri_footer_text ul li a:hover img{
+    transform: rotate(360deg);
+}
+
+.fri_footer_contact ul, .fri_footer_links ul {
+    margin-top: 25px;
+}
+
+.fri_footer_contact ul li, .fri_footer_links ul li{
+    margin-bottom: 10px;
+}
+
+.fri_footer_contact ul li:last-child, .fri_footer_links ul li:last-child{
+    margin: 0;
+}
+
+.fri_footer_contact ul li a, .fri_footer_links ul li a{
+    color: var(--fri-white-color);
+} 
+
+.fri_footer_contact ul li a:hover, .fri_footer_links ul li a:hover{
+    color: var(--fri-primary-color);
+}
+
+.fri_footer_contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.fri_footer_contact ul li span {
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--fri-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+/********************************************************
+    Copyright Section Style
+ *******************************************************/
+
+.fri_copyright_wrapper{
+    background-color: var(--fri-primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+}
+
+.fri_copyright_wrapper p{
+    text-align: center;
+    color: var(--vld-white-color);
+}

@@ -1,0 +1,9 @@
+<svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15" width="15" height="15">
+	<title>Group</title>
+	<defs>
+		<image width="15" height="15" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAAXNSR0IArs4c6QAAALlJREFUOE/lkmENwkAMhb/nAAcgARTAFBAUYAEHbA7AyXCwKWBzMBzgoKSXXjJ+QC78pcmluabf9d1LBWBmNbAFOkmN10pCZrYG7rPmjaThV7iS1BXBIfsC7EL2qQT0HgXsoAU0AgtgGfdH5GPkQdJtDmfQa1WoOOdmwH2ZRyvpkCd/gz/9ohi+Ak8gq/EHm5LJo6Qk28xaYB9S+hK4l+SG5mXK0/8aToakrZE6M1sBfjwmSVMY9lZ/ASX+fWXFAFnhAAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+	</style>
+	<use id="Group" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>

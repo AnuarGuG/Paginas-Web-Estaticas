@@ -1,0 +1,130 @@
+
+/*============================
+Max - Width Query
+============================*/
+
+@media (max-width: 1700px){
+ 
+
+}
+
+@media (max-width:1499.98px){
+
+  
+}
+
+@media (max-width:1399.98px){
+
+
+  
+}
+
+@media (max-width:1199.98px){
+	.tra_menu{
+		gap: 35px;
+	}
+
+	.tra_input .mt_form_input {
+    	min-width: calc( 100% / 2 - 10px );
+	}
+	
+  
+}
+
+
+@media (max-width:991.98px){
+
+	.tra_toggle_menu{
+		display: block;
+	}
+
+	.tra_menu {
+	    position: fixed;
+	    left: -250px;
+	    flex-direction: column;
+	    top: 0;
+	    height: 100vh;
+	    background-color: var(--tra-primary-color);
+	    width: 250px;
+	    padding: 50px 30px;
+	    z-index: 111;
+	    transition: all 0.5s;
+	    align-items: flex-start;
+	}
+
+	.menu-open .tra_menu{
+		left: 0;
+	}
+
+	.tra_about_info{
+		padding: unset;
+	}
+	
+}
+
+@media (max-width:767.98px){
+
+	section{
+		padding: 50px 0;
+	}
+
+	.tra_banner_content{
+		height: 60vh;
+	}
+
+	.tra_social{
+		margin-top: 10px;
+		justify-content: flex-start;
+	}
+
+	.tra_copyright_content{
+		justify-content: center;
+	}
+}
+
+@media (max-width:575.98px){
+
+	body{
+		font-size: 16px;
+	}
+
+	h3{
+		font-size: 30px;
+	}
+
+	.tra_banner_content {
+    	height: 50vh;
+    	padding: 120px 0 50px;
+	}
+
+	.tra_banner_content p{
+		font-size: 20px;
+	}
+
+	.tra_banner_content h1{
+		font-size: 50px;
+	}
+
+	.tra_banner_content span {
+    	font-size: 16px;
+	}
+
+	.tra_pakage_bottom {
+    	padding: 15px 15px 22px;
+	}
+
+	.tra_newsletter_content{
+		padding: 30px 15px;
+	}
+
+	.tra_input .mt_form_input {
+    	min-width: 100%;
+	}
+	
+}
+
+@media (max-width:349.98px){
+
+
+}
+

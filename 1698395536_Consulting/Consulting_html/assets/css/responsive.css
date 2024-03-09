@@ -1,0 +1,386 @@
+@media(max-width:1530px){
+    .cn-banner-right-content .bannerMail{
+        top: 230px;
+        left: 170px;
+    }
+    .cn-banner-right-content .bannerGrow {     
+        bottom: 0;
+        right: 0;
+    }
+    .cn-banner-business {     
+        left: -25px;
+        bottom: 45px;
+    }
+    .cn-banner-employee {
+        right: -65px;
+        top: 160px;
+    }
+    .cn-banner-right-img .boyimg{
+        min-height: auto;
+    }
+}
+@media(max-width:1400px){
+    .cn-banner-right-content .bannerMail {
+        top: 180px;
+        left: 0;
+    }
+    .cn-banner-employee {
+        right: -80px;
+        top: 130px;
+    }
+}
+@media(max-width:1300px){
+    .cn-banner-right-content .bannerMail {
+        top: 50px;
+        left: 50px;
+    }
+    .cn-banner-business, .cn-banner-employee{
+        max-width: 300px;
+        padding: 20px 30px;
+    }
+    .cn-banner-business h6, .cn-banner-employee h6{
+        font-size: 18px;
+    }
+    .cn-banner-business p, .cn-banner-employee p{
+        font-size: 14px;
+    }
+    .cn-banner-employee {     
+        top: 80px;
+    }
+}
+@media(max-width:1199px){
+    .cn-banner-left h6 {
+        font-size: 18px;
+        letter-spacing: 5px;        
+    }
+    .cn-banner-left h1 {
+        font-size: 40px;
+    }
+    .container-fluid {
+        padding: 0 100px 0 80px;
+    }
+    .cn-banner-left p {
+        font-size: 14px;
+    }
+    .cn-about-box-parent{
+        justify-content: center;
+    }
+    .cn-about-right-content {
+        padding: 30px;
+    }
+    .counter-first-box, .counter-mid-box {
+        left: 0;
+    }
+    div#world-map {
+        margin-top: 0;
+    }
+    .cn-footer-parent{
+        display: block;
+    }
+    .address {     
+        margin-bottom: 20px;
+    }
+    .cn-contact-form-box {        
+        margin-top: -350px;        
+        padding: 40px 25px;
+    }   
+    .cn-footer-icon ul li {
+        margin-right: 5px;
+    } 
+}
+@media(max-width:1100px){
+    .cn-banner-right-content .bannerGrow {
+        bottom: -30px;
+        right: -30px;
+    }
+    .cn-banner-business, .cn-banner-employee{
+        max-width: 260px;
+        padding: 20px;
+    } 
+    .cn-banner-business {
+        left: 0;
+        bottom: 25px;
+    }   
+}
+@media(max-width:1050px){    
+    .responsiveToggle{
+        position: absolute;
+    }
+    .cn-toggle-btn {
+        display: block;  
+        cursor: pointer;              
+    }    
+    .cn-toggle-btn span {
+        width: 30px;
+        height: 4px;
+        background-color: var(--cn-theme-color);
+        margin-bottom: 5px;
+        display: block;
+        margin-left: auto;        
+        margin-top: -17px;
+        transition: all 0.3s ease-in-out;
+    }
+    .cn-navbar-menu ul {
+        position: fixed;
+        top: 0;
+        left: -250px;
+        width: 250px;
+        height: 566px;
+        background: #fcf7ff;
+        box-shadow: 1.5px 3.99px 27px 0px rgb(0 0 0 / 10%);
+        z-index: 9;
+        text-align: left;
+        padding: 0;
+        transition: all 0.3s ease-in-out;
+        overflow: auto;
+        padding: 30px 0 0 20px;
+        border-radius: 0 50px 50px 0;
+    }
+    .menu-open .cn-toggle-btn span{
+        margin-top: -13px;
+    }
+    .menu-open .cn-toggle-btn > span:nth-child(2) {
+        transform: translateX(20px);
+        visibility: hidden;
+        opacity: 0;
+    }
+    .menu-open .cn-toggle-btn > span:nth-child(1) {
+        transform: rotate(45deg);
+        transform-origin: 24px -1px;
+    }
+    .menu-open .cn-toggle-btn > span:nth-child(3) {
+        transform: rotate(-45deg);
+    } 
+    .menu-open .cn-navbar-menu ul {
+        left: 0;
+    }
+    .cn-navbar-menu ul li.sidebar-logo {
+        display: block;
+        padding-bottom: 30px;
+    }
+    .cn-navbar-menu ul li{
+        display: block;
+        padding: 15px 0;
+        border-bottom: 1px solid var(--cn-bg-color);
+        width: 100%;
+    }
+    .cn-navbar-menu ul li a{
+        padding-bottom: 11px;
+    }
+}
+@media(max-width:991px){
+    .cn-banner-left {        
+        margin-top: 100px;
+    }
+    .cn-contact-form-box {
+        padding: 40px 45px;
+        max-width: 500px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 30px;
+    }
+    .cn-footer-parent{
+        display: flex;
+    }
+    .cn-footer-btm-heading h1 {
+        font-size: 18px;
+    }
+    .cn-footer-btm-list ul li a img {
+        margin: -4px 8px 0 0;
+    }
+    .cn-footer-btm-list ul li a.cn-paragraph{
+        font-size: 14px;
+    }
+    .cn-footer-first .cn-paragraph {
+        font-size: 14px;
+    }
+    .cn-footer-btm-twitter ul li img {
+        margin: -4px 8px 0 0;
+    }
+    .cn-footer-btm-twitter ul img {        
+        left: -19px;
+    }
+    .cn-footer-btm-twitter ul li.cn-paragraph {     
+        margin-left: 22px;
+    }
+}
+@media(max-width:768px){
+    .cn-blog-right img {
+        margin-top: 30px;
+    }
+    .cn-footer-parent{
+        display: block;
+    }
+    .cn-contact-form-box {                      
+        padding: 40px 25px;
+    } 
+    .cn-footer-info {
+        padding: 35px 25px 35px 25px;
+    }
+    .cn-footer-first .cn-paragraph {             
+        margin-bottom: 25px;
+    }
+}
+@media(max-width:767px){
+    .cn-banner-right-img .boyimg, .cn-blog-right img{
+        min-height: auto;
+    }
+    .cn-footer-icon{
+        margin: 0 0 20px;
+    }
+}
+@media(max-width:640px){
+    .container-fluid {
+        padding: 0 50px;
+    }
+    .bannerMail, .bannerGrow, .boyimg{
+        display: none;
+    }
+    .bannerResponsiveImg{
+        display: block;
+    }
+    .cn-banner-left img{
+        display: none;
+    }    
+    .cn-banner-employee, .cn-banner-business{
+        background-color: var(--cn-white-color);
+        position: relative;        
+        box-shadow: 0 0 30px -13px rgba(0,0,0,0.3);
+        margin-left: auto;
+        margin-right: auto;
+    }        
+    .cn-banner-employee{
+        top: 30px;
+        right: 0;
+        animation: none;
+    }
+    .cn-banner-business {
+        margin-top: 85px; 
+        animation: none;       
+    }    
+}
+@media(max-width:575px){
+    .cn-about-box-parent{
+        display: block;
+    }
+    .cn-left-box:after, .cn-left-box:before{
+        display: none;
+    }
+    .cn-box-inner{
+        margin: auto;
+    }
+    .cn-left-box {     
+        margin-bottom: 50px;
+    }
+    .cn-box-blue {
+        margin-bottom: 30px;
+    }
+    .counter-first-box, .counter-mid-box, .counter-last-box{
+        position: relative;
+        margin: auto;
+    }
+    .counter-first-box{
+        top:30px;
+        animation: none;            
+    }
+    .counter-mid-box{
+        top:60px;
+        animation: none;            
+    }
+    .counter-last-box{
+        top:90px;            
+        left:0;
+        animation: none;
+    }
+    .cn-blog-wrapper {     
+        padding:80px 15px 130px 15px;
+    }
+    .address:after{
+        right: 0;
+    }
+}
+@media(max-width:480px){
+    .cn-service-btn {
+        bottom: -50px;
+        left: 50%;
+        transform: translateX(-50%);
+        max-width: 172px;
+        width: 100%;
+    }
+    .cn-service-heading {     
+        text-align: center;
+    }
+    .cn-service-heading h1:after {
+        bottom: -10px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        margin: auto;
+    }
+    .cn-service-box{
+        margin-top: 90px;
+    }
+}
+@media(max-width:425px){
+    .container-fluid{
+        padding: 0 20px;
+    }
+    .cn-about-wrapper, .cn-service-wrapper, .cn-testimonial-wrapper {
+        padding: 30px 0;
+    }
+    .cn-blog-wrapper, .cn-contact-wrapper{
+        padding-top: 30px;
+    }    
+    .cn-about-right-content {
+        padding: 30px 15px 0 15px;
+    }
+    .cn-footer-bottom-wrapper {
+        margin-top: 30px;
+    }
+    .cn-footer-wrapper {
+        padding-bottom: 30px;
+    }
+    .cn-heading {
+        font-size: 25px;
+    }
+    .cn-paragraph {
+        font-size: 14px;
+    }
+    .cn-banner-left h6 {
+        font-size: 16px;     
+    }
+    .cn-banner-left h1{
+        font-size: 30px;
+    }
+    .cn-banner-left p{
+        font-size: 12px;
+    }
+    .cn-btn {
+        max-width: 190px;
+        width: 100%;
+        height: 50px;
+        font-size: 14px;
+    }
+    .cn-partner-wrapper h1 {
+        font-size: 30px;
+    }
+}
+@media(max-width:375px){
+    .cn-client-name h6 {
+        font-size: 18px;
+    }
+    .cn-client-name p {
+        font-size: 12px;
+    }
+    .cn-qoute-img {     
+        top: -17px;
+        right: 20px;
+    }
+    .cn-client-box {
+        padding: 30px 30px 30px 30px;
+    }
+    .cn-service-box {
+        padding: 40px 20px;
+    }
+}

@@ -1,0 +1,748 @@
+/*
+[Master Stylesheet] 
+Project: GuruYoga Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Rubik:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    --gy-primary-color:#673e2c;
+    --gy-secondary-color:#E86A13;
+    --gy-white-color: #ffffff;
+    --gy-font-color: #333333;
+    --gy-transition: all 0.3s;
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;	  	
+	-webkit-font-smoothing: antialiased;
+    font-family: 'Open Sans', sans-serif;    
+}
+html {
+  scroll-behavior: smooth;
+}
+*,*:before,*:after{
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+a, a:hover, a:focus{	
+	text-transform: capitalize;
+	text-decoration: none;
+	-webkit-transition: var(--gy-transition);
+    -moz-transition: var(--gy-transition);
+    -ms-transition: var(--gy-transition);
+    -o-transition: var(--gy-transition);
+    transition: var(--gy-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--gy-transition);
+    -moz-transition: var(--gy-transition);
+    -ms-transition: var(--gy-transition);
+    -o-transition: var(--gy-transition);
+    transition: var(--gy-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    font-family: 'Rubik', sans-serif;
+}
+h6{
+    font-size: 16px;
+    font-weight: 500;
+}
+h5{
+    font-size: 18px;
+    font-weight: 500;
+}
+h4{
+    font-size: 32px;
+    font-weight: 600;
+}
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 100px 0;
+}
+
+.row{
+    row-gap: 30px;
+}
+
+.gy_section_heading {
+    text-align: center;
+    max-width: 720px;
+    margin: 0 auto 20px;
+}
+
+.gy_section_heading img{
+    animation: 3s zig infinite alternate;
+}
+
+@keyframes zig {
+    0% {
+        transform: rotate(20deg);
+        
+    }
+    100% {
+        transform: rotate(-20deg);
+        
+    }
+}
+
+.gy_section_heading h4 {
+    margin: 10px 0;
+    text-transform: uppercase;
+}
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.gy-top-icon a {
+    display: flex;
+    background-color: var(--gy-primary-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--gy-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 1000;
+	animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+.gy-top-icon a img {
+    transform: rotate(270deg);
+}
+
+.gy-top-icon a:active {
+  background-color: #555;
+}
+.gy-top-icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--gy-white-color);
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Button Style
+ *******************************************************/
+.gy_btn {
+    border-radius: 50px;
+    color: var(--gy-white-color);
+    overflow: hidden;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 16px;
+    text-transform: capitalize;
+    background-color: var(--gy-primary-color);
+    background-size: 500px;
+    background-repeat: no-repeat;
+    background-position: 0;
+    transition: background .3s ease-in-out;
+    font-family: "Rubik", Sans-serif;
+    min-width: 170px;
+    padding: 0 30px;
+    height: 60px;
+}
+.gy_btn:hover{
+    background-position: 100%;
+    background-color: #555;
+    color: var(--gy-white-color);
+}
+
+/********************************************************
+    Header Section Style
+ *******************************************************/
+
+.pp-header-wrapper {
+    background-color: var(--gy-white-color);
+    height: 90px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.pp-header-wrapper.pp-header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-animation: slideDown 0.35s ease-out;
+    animation: slideDown 0.35s ease-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(0); 
+    }
+}
+
+.gy_header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.gy_logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.gy_logo .logo{
+    max-height: 50px;
+    object-fit: contain;
+    object-position: left;
+}
+
+.gy_logo span{
+    display: none;
+}
+
+.gy_menu {
+    display: flex;
+    gap: 40px;
+}
+
+.gy_menu li a {
+    font-family: "Rubik", Sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--gy-primary-color);
+    transition: var(--gy-transition);
+}
+
+.gy_menu li a:hover {
+    color: var(--gy-secondary-color);
+}
+
+.gy_header_btn {
+    text-align: end;
+}
+
+.gy_body_overlay{
+    position: fixed;
+    background: rgb(0 0 0 / 40%);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    cursor: zoom-in;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.menu-open .gy_body_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    Banner Section Style
+ *******************************************************/
+
+.gy_banner_wrapper {
+    padding: 150px 0 100px;
+    background-image: url(../images/banner_bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gy_banner_text h6{
+    color: var(--gy-primary-color);
+    text-transform: uppercase;
+}
+
+.gy_banner_text h4 {
+    margin: 10px 0 5px;
+    text-transform: uppercase;
+}
+
+.gy_banner_text p {
+    margin-bottom: 20px;
+}
+
+.gy_banner_btn {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.gy_banner_btn .gy_btn {
+    padding: 12px;
+    min-width: 170px;
+}
+
+.gy_banner_btn .gy_play_btn {
+    width: 65px;
+    height: 65px;
+    background-color: var(--gy-primary-color);
+    border-radius: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--gy-transition);
+    transform: scale(1);
+}
+
+.gy_banner_btn .gy_play_btn:hover {
+    transform: scale(0.95);
+    background-color: #555;
+    transition: var(--gy-transition);
+}
+
+.gy_banner_img{
+    animation: 4s installation infinite alternate;
+}
+
+/********************************************************
+    About Section Style
+ *******************************************************/
+
+.gy_about_wrapper {
+    background: rgba(237, 240, 245, 0.96);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.gy_about_img {
+    text-align: center;
+}
+
+.gy_about_wrapper .gy_banner_text p:last-child {
+    margin-bottom: 35px;
+}
+
+.gy_about_benifit {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.gy_banifit_inner {
+    display: flex;
+    align-items: start;
+    gap: 10px;
+}
+
+.gy_benifit_txt {
+    max-width: 300px;
+}
+
+.gy_about_btn {
+    margin-top: 40px;
+}
+
+.gy_about_btn a {
+    padding: 12px 45px 13px 45px;
+    text-transform: uppercase;
+    height: fit-content;
+}
+
+.gy_about_btn a:last-child{
+    background-color: var(--gy-font-color) ;
+}
+
+.gy_about_btn a:last-child:hover{
+    background-color: #555;
+}
+
+.gy_about_btn span {
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 0 5px rgba(255,255,255,.3);
+    background-color: #fff;
+    border-radius: 50%;
+    margin: 0 -15px;
+    z-index: 1;
+    position: relative;
+}
+
+.gy_service_wrapper {
+    padding-top: 100px;
+}
+
+.gy_service_box {
+    background-color: #ffffff;
+    padding: 30px 15px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    text-align: center;
+}
+
+.gy_service_box span {
+    box-shadow: -1.216px 6.894px 15px 0px rgba(0, 0, 0, 0.07);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.gy_service_box h5 {
+    text-transform: uppercase;
+    margin: 20px 0 5px;
+}
+
+/********************************************************
+    About Section Style
+ *******************************************************/
+
+.gy_client_wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/banner_bg.jpg);
+    background-attachment: fixed;
+}
+
+.gy_client_box {
+    background-color: #ffffff;
+    padding: 15px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    display: flex;
+    gap: 12px;
+}
+
+.gy_client_box .gy_client_icon {
+    padding-right: 12px;
+    border-right: 1px dashed rgb(51 51 51 / 30%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gy_client_box .gy_client_txt h4{
+    color: var(--gy-primary-color);
+}
+
+/********************************************************
+    Trainers Section Style
+ *******************************************************/
+
+.gy_trainer_wrapper {
+    background: rgba(237, 240, 245, 0.96);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat
+}
+
+.gy_trainer_img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: auto;
+    border-radius: 50%;
+    border: 10px solid #f3f3f3;
+    margin-bottom: -70px;
+    position: relative;
+}
+
+.gy_trainer_img img {
+    max-width: 100%;
+    min-height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gy_trainer_box {
+    text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    padding: 70px 0 20px;
+}
+
+.gy_trainer_txt h5 {
+    color: var(--gy-primary-color);
+    margin-top: 25px;
+}
+
+ul.gy_trainer_social {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.gy_trainer_social li a {
+    background-color: var(--gy-primary-color);
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.gy_trainer_social li a img {
+   transition: var(--gy-transition);
+}
+
+.gy_trainer_social li a:hover img {
+    transform: rotateY(360deg);
+}
+
+.gy_trainer_btn {
+    text-align: center;
+}
+
+/********************************************************
+    Testimonial Section Style
+ *******************************************************/
+
+.gy_testi_wrapper{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/banner_bg.jpg);   
+}
+
+.gy_testi_slider{
+    position: relative;
+}
+
+.gy_testi_box {
+    background-color: #ffffff;
+    padding: 10px 20px 50px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    text-align: center;
+    background-image: url(../images/quote.png);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.gy_testi_box p {
+    margin-top: 20px;
+}
+
+.gy_testi_client {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    margin-top: -40px;
+}
+
+.gy_client_img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 2px solid #f3f3f3;
+}
+
+.gy_client_img img {
+    max-width: 100%;
+    min-height: 80px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.gy_client_info h6 {
+    color: var(--gy-primary-color);
+}
+
+.gy_client_info p {
+    font-size: 14px;
+}
+
+.gy_testi_slider .swiper-pagination {
+    position: relative;
+    bottom: unset;
+    margin-top: 15px;
+}
+
+.gy_testi_slider .swiper-pagination .swiper-pagination-bullet-active {
+    background-color: var(--gy-secondary-color);
+}
+
+/********************************************************
+    Contact Section Style
+ *******************************************************/
+
+.gy_contact_wrapper{
+    background: rgba(237, 240, 245, 0.96);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.gy_form {
+    background-color: #ffffff;
+    padding: 30px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+    border-radius: 5px;
+    max-width: 960px;
+    margin: auto;
+}
+
+.gy_form .row {
+    row-gap: 15px;
+}
+
+.gy_form .mt_form_input {
+    max-width: calc(100% / 2);
+}
+
+.gy_form .mt_form_input label {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.gy_form .mt_form_input input, .gy_form .mt_form_input textarea {
+    height: 50px;
+    border-radius: 4px;
+    background-color: #FBFBFF;
+    border: 1px solid #E2E2EF;
+    padding: 5px 10px;
+    width: 100%;
+    resize: none;
+}
+
+.gy_form-btn {
+    margin-top: 15px;
+}
+
+/********************************************************
+    Footer Section Style
+ *******************************************************/
+
+.gy_footer_wrapper{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../images/footer_bg.jpg);
+}
+
+.gy_footer_logo img{
+    max-height: 66px;
+    object-fit: contain;
+    object-position: left;
+}
+
+.gy_footer_para {
+    margin-top: 20px;
+    max-width: 370px;
+}
+
+.gy_footer_para p {
+    font-size: 14px;
+    color: #fff;
+}
+
+.gy_footer_links h6 {
+    color: var(--gy-white-color);
+    margin-bottom: 15px;
+}
+
+.gy_footer_links ul li a{
+    color: var(--gy-white-color);
+    font-size: 14px;
+    transition: var(--gy-transition);
+}
+
+.gy_footer_links ul li a:hover{
+    color: var(--gy-primary-color);
+}
+
+/********************************************************
+    Copyright Section Style
+ *******************************************************/
+
+.gy_copyright_wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: var(--gy-primary-color);
+    padding: 10px 0;
+    text-align: center;
+}
+
+.gy_copyright_wrapper p{
+    color: var(--gy-white-color);
+}

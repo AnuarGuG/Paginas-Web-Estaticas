@@ -1,0 +1,833 @@
+/*
+[Master Stylesheet] 
+Project: Villa Delight Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&family=Jost:wght@300;400;500;600;700;800;900&family=Mulish:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --vld-primary-color:#1266E3;
+    --vld-secoundry-color: #fff9f5;
+    --vld-white-color: #ffffff;
+    --vld-font-color: #2d3954;
+    --vld-font-light: #4e5c79;
+    --vld-transition: all 0.3s;
+    --vld-box-shadow: 0 0 20px 0 rgba(62, 28, 131, 0.1);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Mulish', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--vld-font-light);
+}
+
+a, a:hover, a:focus, button, button:hover, button:focus{	
+	text-decoration: none;
+	-webkit-transition: var(--vld-transition);
+    -moz-transition: var(--vld-transition);
+    -ms-transition: var(--vld-transition);
+    -o-transition: var(--vld-transition);
+    transition: var(--vld-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--vld-transition);
+    -moz-transition: var(--vld-transition);
+    -ms-transition: var(--vld-transition);
+    -o-transition: var(--vld-transition);
+    transition: var(--vld-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    font-family: 'Jost', sans-serif;
+    text-transform: capitalize;
+    color: var(--vld-font-color);
+}
+
+h6{
+    font-size: 16px;
+    font-weight: 600;
+}
+h5 {
+    font-size: 20px;
+    font-weight: 700;
+}
+h4{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 70px 0;
+}
+
+.row{
+    row-gap: 24px;
+}
+
+.vld_section_heading {
+    text-align: center;
+    max-width: 730px;
+    margin: 0 auto 15px;
+}
+
+.vld_section_heading h4{
+    color: var(--vld-font-color);
+}
+
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.vld_top_icon a {
+    display: flex;
+    background-color: var(--vld-primary-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--vld-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 1000;
+    animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+
+.vld_top_icon a:active {
+  background-color: var(--vld-font-light);
+}
+.vld_top_icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--vld-white-color);
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Button Style
+ *******************************************************/
+
+.vld_btn {
+    background-color: var(--vld-primary-color);
+    color: var(--vld-white-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 0 35px;
+    padding: 10px;
+    min-height: 50px;
+    min-width: 125px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Jost', sans-serif;
+
+}
+
+.vld_btn:hover{
+    background-color: var(--vld-font-color);
+    color: var(--vld-white-color);
+}
+
+/********************************************************
+    Header Section Style
+ *******************************************************/
+
+.vld_pre_header {
+    background-color: var(--vld-primary-color);
+    padding: 10px 0;
+}
+
+.vld_pre_header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.vld_pre_head_contact {
+    display: flex;
+    gap: 20px;
+}
+
+.vld_pre_head_contact span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.vld_pre_head_contact span a {
+    color: var(--vld-white-color);
+}
+
+.vld_header_social {
+    display: flex;
+    gap: 7px;
+}
+
+.vld_header_social li a {
+    background-color: var(--vld-font-color);
+    display: inline-flex;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.vld_header_social li a img{
+    transition: var(--vld-transition);
+}
+
+.vld_header_social li a:hover img {
+    transform: rotate(360deg);
+}
+
+.pp-header-wrapper {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    transition: var(--vld-transition);
+}
+
+.pp-header-wrapper.pp-header-fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+
+.vld_header_content {
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    max-width: 1170px;
+    align-items: center;
+    box-shadow: var(--vld-box-shadow);
+    background-color: var(--vld-white-color);
+    padding: 18px 60px;
+    transition: var(--vld-transition);
+}
+
+
+.pp-header-wrapper.pp-header-fixed .vld_header_content{
+    max-width: 100%;
+}
+
+.vld_menu{
+    display: flex;
+    gap: 70px;
+}
+
+.vld_menu li a {
+    text-transform: capitalize;
+    color: var(--vld-font-light);
+    font-weight: 700;
+    padding: 25px 0px;
+}
+
+.vld_menu li a:hover{
+    color: var(--vld-primary-color);
+}
+
+.vld_header_logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.vld_header_logo a img {
+    object-position: left;
+}
+
+.vld_toggle_menu {
+    display: none;
+    cursor: pointer;
+}
+
+.vld_body_overlay {
+    position: fixed;
+    background: rgb(0 0 0 / 40%);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    cursor: zoom-in;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.menu-open .vld_body_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    Banner Section Style
+ *******************************************************/
+
+.vld_slide1,
+.vld_slide2,
+.vld_slide3{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.vld_slide1{
+    background-image: url(../images/slide-1.jpg);
+}
+.vld_slide2{
+    background-image: url(../images/slide-2.jpg);
+}
+.vld_slide3{
+    background-image: url(../images/slide-3.jpg);
+}
+
+.vld_banner_content {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.vld_banner_content h3 {
+    font-size: 30px;
+    color: var(--vld-white-color);
+    margin-bottom: 15px;
+    font-family: 'Charmonman', cursive;
+}
+
+.vld_banner_content h2{
+    font-size: 56px;
+    color: var(--vld-white-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.vld_banner_content p{
+    font-size: 18px;
+    color: var(--vld-white-color);
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after{
+    font-size: 30px;
+    color: var(--vld-white-color);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--vld-transition);
+}
+
+.swiper:hover .swiper-button-prev:after,
+.swiper:hover .swiper-button-next:after{
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    About Section Style
+ *******************************************************/
+
+.vld_about_wrapper, .vld_agent_wrapper{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.vld_about_box {
+    position: relative;
+    padding: 40px 35px;
+    border-radius: 0 35px;
+}
+
+.vld_about_box.box-1{
+    border: 1px solid #0fca984d;
+}
+
+.vld_about_box.box-2{
+    border: 1px solid #ff8f004d;
+}
+
+.vld_about_box.box-3{
+    border: 1px solid #1d96ff4d;
+}
+
+.vld_about_box h5 {
+    margin: 20px 0 15px;
+}
+
+/********************************************************
+    Listing Section Style
+ *******************************************************/
+
+.vld_listing_wrapper, .vld_testi_wrapper, .vld_footer_wrapper{
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #F5FAFF;
+}
+
+.vld_listing_box, .vld_agent_box{
+    border-radius: 0 35px;
+    background-color: var(--vld-white-color);
+    box-shadow: var(--vld-box-shadow);
+    overflow: hidden;
+}
+
+.vld_listing_img, .vld_agent_img {
+    max-height: 290px;
+    overflow: hidden;
+}
+
+.vld_listing_img img, .vld_agent_img img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    transition: var(--vld-transition);
+    object-position: top;
+}
+
+.vld_listing_box:hover .vld_listing_img img,
+.vld_agent_box:hover .vld_agent_img img {
+    transform: scale(1.2) rotate(2deg);
+}
+
+.vld_listing_content, .vld_agent_content {
+    padding: 15px 25px;
+}
+
+.vld_listing_text h6, .vld_agent_text h6{
+    font-size: 18px;
+}
+
+.vld_listing_text span {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    margin-top: 10px;
+}
+
+.vld_listing_text span p, .vld_agent_text span {
+    font-size: 14px;
+}
+
+.vld_listing_features {
+    display: flex;
+    border-top: 1px solid #e4e8f3;
+    border-bottom: 1px solid #e4e8f3;
+    justify-content: space-between;
+    margin: 10px 0;
+    width: 100%;
+}
+
+.vld_listing_features li {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    border-right: 1px solid #e4e8f3;
+    padding: 20px 0;
+    width: calc(100% / 3);
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.vld_listing_features li:last-child{
+    border: none;
+}
+
+.vld_listing_price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vld_listing_price h5{
+    color: var(--vld-primary-color);
+}
+
+.vld_listing_price a {
+    padding: 4px 25px;
+    color: var(--vld-white-color);
+    background: var(--vld-primary-color);
+    border-radius: 0 35px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.vld_listing_btn a, .vld_agent_btn a {
+    margin: auto;
+}
+
+/********************************************************
+    Agent Section Style
+ *******************************************************/
+
+.vld_agent_slider{
+    padding: 12px;
+}
+
+.vld_agent_text {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e4e8f3;
+    margin-bottom: 10px;
+}
+
+.vld_agent_text span{
+    color: var(--vld-primary-color);
+}
+
+.vld_agent_text p {
+    margin-top: 10px;
+}
+
+.vld_agent_social ul li a {
+    background-color: var(--vld-primary-color);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.vld_agent_social {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+}
+
+.vld_agent_social ul {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.vld_agent_social ul li a img{
+    transition: var(--vld-transition);
+}
+
+.vld_agent_social ul li a:hover img{
+    transform: rotate(360deg);
+}
+
+/********************************************************
+    Testimonial Section Style
+ *******************************************************/
+
+.vld_testi_slider {
+    padding: 12px;
+}
+
+.vld_testi_slider .swiper-pagination .swiper-pagination-bullet{
+    background-color: var(--vld-font-light);
+    width: 10px;
+    height: 10px;
+}
+
+.vld_testi_slider .swiper-pagination .swiper-pagination-bullet-active {
+    width: 20px;
+    height: 10px;
+    border-radius: 11px;
+}
+
+.vld_testi_box {
+    border-radius: 0 35px;
+    background-color: var(--vld-primary-color);
+    box-shadow: var(--vld-box-shadow);
+    overflow: hidden;
+    padding-top: 10px;
+    padding-left: 10px;
+    position: relative;
+}
+
+.vld_testi_box_inner {
+    border-radius: 0 35px;
+    background-color: var(--vld-white-color);
+    overflow: hidden;
+    padding: 60px 30px;
+    text-align: center;
+    position: relative;
+}
+
+.vld_testi_text span{
+    color: var(--vld-primary-color);
+    font-size: 14px;
+}
+
+.vld_testi_text p {
+    margin-top: 10px;
+}
+
+.vld_testi_quotes img {
+    position: absolute;
+    filter: opacity(0.5);
+    transition: var(--vld-transition);
+}
+
+.vld_testi_box:hover .vld_testi_quotes img{
+    filter: opacity(1);
+}
+
+.vld_testi_quotes img:first-child{
+    top: 15px;
+    left: 15px;
+}
+
+.vld_testi_quotes img:last-child{
+    bottom: 15px;
+    right: 15px;
+}
+
+.vld_client_img {
+    width: 80px;
+    height: 80px;
+    overflow: hidden;
+    border-radius: 50%;
+    box-shadow: var(--vld-box-shadow);
+    margin: -40px 0 0 40px;
+    position: relative;
+}
+
+.vld_client_img img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    min-height: 80px;
+}
+
+/********************************************************
+    Newsletter Section Style
+ *******************************************************/
+
+.vld_newsletter_wrapper {
+    background-image: url(../images/slide-1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.vld_newsletter_content {
+    text-align: center;
+}
+
+.vld_newsletter_content h3 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--vld-white-color);
+}
+
+.vld_newslatter {
+    margin-top: 30px;
+}
+
+.vld_newslatter .mt_popup_form{
+    position: relative;
+    max-width: 500px;
+    margin: auto;
+}
+
+.vld_newslatter .mt_form_input {
+    width: 100%;
+}
+
+.vld_newslatter .mt_form_input label {
+    width: 100%;
+    color: var(--vld-white-color);
+    text-align: left;
+}
+
+.vld_newslatter .mt_form_input input {
+    width: 100%;
+    height: 50px;
+    padding: 15px 130px 15px 30px;
+    border-radius: 0 35px;
+}
+
+.vld_newslatter .mt_popup_form button {
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    min-height: 48px;
+}
+
+/********************************************************
+    Footer Section Style
+ *******************************************************/
+
+.vld_footer_logo img {
+    object-position: left;
+}
+
+.vld_footer_text p {
+    margin: 15px 0;
+    max-width: 350px;
+}
+
+.vld_footer_text ul{
+    display: flex;
+    gap: 10px;
+}
+
+.vld_footer_text ul li a{
+    width: 40px;
+    height: 40px;
+    background-color: var(--vld-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+.vld_footer_text ul li a img{
+    transition: var(--vld-transition);
+}
+
+.vld_footer_text ul li a:hover img{
+    transform: rotate(360deg);
+}
+
+.vld_footer_contact ul, .vld_footer_links ul {
+    margin-top: 30px;
+}
+
+.vld_footer_contact ul li, .vld_footer_links ul li{
+    margin-bottom: 10px;
+}
+
+.vld_footer_contact ul li:last-child, .vld_footer_links ul li:last-child{
+    margin: 0;
+}
+
+.vld_footer_contact ul li a, .vld_footer_links ul li a{
+    color: var(--vld-font-light);
+} 
+
+.vld_footer_contact ul li a:hover, .vld_footer_links ul li a:hover{
+    color: var(--vld-primary-color);
+}
+
+.vld_footer_contact ul li{
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.vld_footer_contact ul li span {
+    min-width: 40px;
+    height: 40px;
+    background-color: var(--vld-primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+
+/********************************************************
+    Copyright Section Style
+ *******************************************************/
+
+.vld_copyright_wrapper{
+    background-color: var(--vld-primary-color);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 10px 0;
+}
+
+.vld_copyright_wrapper p{
+    text-align: center;
+    color: var(--vld-white-color);
+}
+

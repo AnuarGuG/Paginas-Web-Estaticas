@@ -1,0 +1,977 @@
+/*
+[Master Stylesheet] 
+Project: Fascination Html
+-------------------------------------------------------------------*/
+/********************************************************
+    body start
+ *******************************************************/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --fas-primary-color:#c09578;
+    --fas-white-color: #ffffff;
+    --fas-font-color: #212121;
+    --fas-font-light: #7d7d7d;
+    --fas-transition: all 0.3s;
+    --fas-box-shadow: 0 0 15px #0000004d;
+    --fas-border-color: #ebebeb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+*,*:before,*:after{
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    font-family: 'Rubik', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+::-webkit-scrollbar {
+    width: 4px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+    background: var(--fas-font-color);
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+    background: var(--fas-primary-color);
+    width: 4px;
+}
+
+a, a:hover, a:focus, button, button:hover, button:focus{	
+	text-decoration: none;
+	-webkit-transition: var(--fas-transition);
+    -moz-transition: var(--fas-transition);
+    -ms-transition: var(--fas-transition);
+    -o-transition: var(--fas-transition);
+    transition: var(--fas-transition);
+}
+h1, h2, h3, h4, h5, h6{	
+	-webkit-transition: var(--fas-transition);
+    -moz-transition: var(--fas-transition);
+    -ms-transition: var(--fas-transition);
+    -o-transition: var(--fas-transition);
+    transition: var(--fas-transition);
+	margin:0;
+	padding:0;	
+	word-break: break-word;
+    font-family: 'Playfair Display', serif;
+}
+h6 {
+    font-size: 15px;
+    font-weight: 700;
+}
+h5{
+    font-size: 18px;
+    font-weight: 700;
+}
+h4{
+    font-size: 24px;
+    font-weight: 700;
+}
+input, textarea, select, button, label, svg, svg path, svg rect, svg polygon, img, a, :after, :before, :hover, :focus{
+	outline: none !important;
+	box-shadow:none;
+    border: none;
+    object-fit: contain;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+ul{
+	padding:0;
+	margin:0;
+	list-style-type: none;
+}
+p {
+  margin: 0px;
+  word-break: break-word;
+}
+
+section{
+    padding: 70px 0;
+}
+
+.row{
+    row-gap: 30px;
+}
+
+/********************************************************
+    Go to Top Style
+ *******************************************************/
+.fas-top-icon a {
+    display: flex;
+    background-color: var(--fas-font-color);
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    transition: var(--fas-transition)  opacity 0;
+    visibility: hidden;
+    z-index: 1000;
+    animation: 4s installation infinite alternate;
+    cursor: pointer;
+}
+@keyframes installation {
+    0% {
+        transform: translateY(0px);
+        
+    }
+    50% {
+        transform: translateY(-20px);
+        
+    }
+}
+.fas-top-icon a img {
+    transform: rotate(270deg);
+}
+
+.fas-top-icon a:active {
+  background-color: var(--fas-font-light);
+}
+.fas-top-icon a.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+/********************************************************
+    Loader Style
+ *******************************************************/
+.loader {
+	position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--fas-white-color);
+}
+.loader img {
+	width: 100px;
+}
+
+/********************************************************
+    Button Style
+ *******************************************************/
+
+.fas_btn {
+    background-color: var(--fas-primary-color);
+    color: var(--fas-white-color);
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 3px;
+    padding: 10px;
+    min-height: 50px;
+    min-width: 125px;
+    width: fit-content;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas_btn:hover{
+    background-color: var(--fas-font-color);
+    color: var(--fas-white-color);
+}
+
+/********************************************************
+    Header Section Style
+ *******************************************************/
+
+.pp-header-wrapper {
+    background-color: var(--fas-white-color);
+    height: 100px;
+    width: 100%;
+    padding: 20px 0;
+    display: flex;
+    align-items: center;
+    z-index: 99;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    border-bottom: 1px solid var(--fas-border-color);
+}
+
+.pp-header-wrapper.pp-header-fixed{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    -webkit-animation: slideDown 0.35s ease-out;
+    animation: slideDown 0.35s ease-out;
+}
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%);
+    }
+    50% {
+        transform: translateY(0); 
+    }
+}
+
+.fas_header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.fas_logo {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.fas_logo .logo {
+    max-height: 60px;
+    object-fit: contain;
+    min-height: 60px;
+    object-position: left;
+}
+
+.fas_logo span {
+    display: none; 
+    cursor: pointer;
+}
+
+.fas_menu {
+    display: flex;
+    gap: 70px;
+}
+
+.fas_menu li a {
+    transition: var(--fas-transition);
+    color: var(--fas-font-color);
+    font-size: 13px;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+.fas_menu li a:hover {
+    color: var(--fas-primary-color);
+}
+
+.fas_body_overlay{
+    position: fixed;
+    background: rgb(0 0 0 / 40%);
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    cursor: zoom-in;
+    -webkit-transition: all 0.3s linear 0s;
+    -moz-transition: all 0.3s linear 0s;
+    -ms-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+
+.menu-open .fas_body_overlay {
+    opacity: 1;
+    visibility: visible;
+}
+
+/********************************************************
+    Banner Section Style
+ *******************************************************/
+
+.fas_slide_1, .fas_slide_2, .fas_slide_3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: 75px;
+}
+
+.fas_slide_1{
+    background-color: #fbf7f6;
+}
+
+.fas_slide_2{
+    background-color: #050304;
+}
+
+.fas_slide_3{
+    background-color: #fbf7f6;
+}
+
+.fas_slider_content p {
+    font-size: 18px;
+    color: var(--fas-font-color);
+    text-transform: capitalize;
+}
+
+.fas_slide_2 .fas_slider_content p {
+    color: var(--fas-white-color);
+}
+
+.fas_slider_content p span {
+    color: var(--fas-primary-color);
+    font-size: 30px;
+    font-weight: 500;
+    margin-left: 8px;
+}
+
+.fas_slider_content h1 {
+    font-size: 60px;
+    font-weight: 700;
+    color: var(--fas-font-color);
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+.fas_slide_2 .fas_slider_content h1{
+    color: var(--fas-white-color);
+}
+
+.fas_banner_btn {
+    margin-top: 55px;
+}
+
+.fas_slider_img {
+    max-width: 546px;
+    overflow: hidden;
+}
+
+.fas_slider_img img {
+    min-height: 546px;
+    object-fit: cover;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--fas-font-color);
+}
+
+/********************************************************
+    Shipping Section Style
+ *******************************************************/
+
+.fas_shipping_wrapper {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+}
+
+.fas_shipping_box {
+    display: flex;
+    gap: 15px;
+}
+
+/********************************************************
+    Latest Products Section Style
+ *******************************************************/ 
+
+.fas_latest_wrapper, .fas_blog_wrapper, .fas_contact_wrapper{
+    background-color: #f8f9f9;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+.fas_section_heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.fas_slider_btn {
+    position: relative;
+    display: flex;
+    gap: 10px;
+}
+
+.fas_slider_btn .swiper-button-prev, .fas_slider_btn .swiper-button-next {
+    position: relative;
+    right: unset;
+    left: unset;
+    top: unset;
+    bottom: unset;
+    margin: 0;
+    padding: 0 7px;
+    width: auto;
+    height: auto;
+}
+
+.fas_slider_btn .swiper-button-prev::after, .fas_slider_btn .swiper-button-next::after{
+    display: none;
+}
+
+.fas_slider_btn .swiper-button-prev a, .fas_slider_btn .swiper-button-next a {
+    font-size: 20px;
+    color: var(--fas-font-color);
+}
+
+.fas_slider_btn .swiper-button-prev a:hover, .fas_slider_btn .swiper-button-next a:hover{
+    color: var(--fas-primary-color);
+}
+
+.fas_product_slider, .fas_blog_slider{
+    margin: 5px 0;
+}
+
+.fas_product_box {
+    background-color: var(--fas-white-color);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px 0.5px #0000000d;
+}
+
+.fas_product_img {
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+    padding: 10px;
+    max-height: 240px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.fas_product_img img {
+    min-height: 240px;
+    object-fit: contain;
+}
+
+.fas_product_img .fas_prod_btn, .fas_product_img .fas_prod_wish {
+    position: absolute;
+}
+
+.fas_product_img .fas_prod_btn {
+    width: 100%;
+    bottom: 10px;
+    transform: translateY(60px);
+    transition: var(--fas-transition);
+    left: 0;
+}
+
+.fas_product_img .fas_prod_btn a{
+    margin: auto;
+}
+
+.fas_product_box:hover .fas_product_img .fas_prod_btn{
+    transform: translateY(0);
+}
+
+.fas_product_img .fas_prod_wish {
+    top: 7px;
+    right: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.fas_prod_wish a {
+    box-shadow: 0 2px 1px 0.5px #0000000d;
+    width: 35px;
+    height: 35px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--fas-transition);
+}
+
+.fas_prod_wish a img{
+    transform: scale(0);
+    transition: var(--fas-transition);
+    min-height: fit-content;
+}
+
+.fas_product_box:hover .fas_prod_wish a {
+    opacity: 1;
+    visibility: visible;
+}
+
+.fas_product_box:hover .fas_prod_wish a img{
+    transform: scale(1);
+}
+
+.fas_product_text {
+    padding: 5px 5px 0;
+}
+
+.fas_product_text h6 a {
+    color: var(--fas-primary-color);
+}
+
+.fas_prod_val {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.fas_prod_amt, .fas_rating {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.fas_prod_amt p {
+    font-weight: 500;
+}
+
+.fas_prod_amt span {
+    text-decoration: line-through;
+    color: #797979;
+}
+
+.fas_prod_amt p.fas_discount{
+    color: var(--fas-primary-color);
+}
+
+/********************************************************
+    Category Section Style
+ *******************************************************/
+
+.fas_category_wrapper, .fas_testi_wrapper{
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-image: url(../images/cat_bg.jpg);
+}
+
+.fas_category_box {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px 0.5px #0000000d;
+    background-color: #f7f7f7;
+    max-height: 210px;
+}
+
+.fas_category_box img {
+    transition: var(--fas-transition);
+    transform: scale(1.0);
+    min-height: 210px;
+    object-fit: cover;
+}
+
+.fas_category_box img:hover{
+    transform: scale(1.1);
+}
+
+.fas_cate_inner_text {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    text-align: right;
+}
+
+.fas_cate_inner_text p{
+    color: #5a5a5a;
+}
+
+.fas_cate_inner_btn {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+}
+
+.fas_cate_btn {
+    margin-top: 15px;
+}
+
+.fas_cate_btn a {
+    margin: auto;
+}
+
+/********************************************************
+    Blog Section Style
+ *******************************************************/
+
+.fas_blog_card {
+    border-radius: 10px;
+    box-shadow: 0 2px 1px 0.5px #0000000d;
+    background-color: var(--fas-white-color);
+    padding: 5px;
+}
+
+.fas_blog_thumb {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    max-height: 260px;
+}
+
+.fas_blog_thumb img {
+    width: 100%;
+    transition: var(--fas-transition);
+    min-height: 260px;
+    object-fit: cover;
+}
+
+.fas_blog_card:hover .fas_blog_thumb img{
+    transform: scale(1.1);
+}
+
+.fas_blog_info {
+    padding: 0 15px;
+}
+
+.fas_blog_writer {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 0;
+    gap: 10px;
+}
+
+.fas_writer_info, .fas_blog_date {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.fas_writer_info img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.fas_writer_info p, .fas_blog_date p {
+    line-height: normal;
+}
+
+.fas_blog_description h6 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-align: left;
+    color: var(--fas-primary-color);
+}
+
+.fas_blog_description p {
+    margin: 12px 0;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+}
+
+.fas_comment_wrapper {
+    display: flex;
+    gap: 30px;
+    border-top: 1px solid rgb(0 0 0 / 3%);
+    border-bottom: 1px solid rgb(0 0 0 / 3%);
+    padding: 20px 0;
+}
+
+.fas_hashtag {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.fas_comment_wrapper span {
+    font-size: 12px;
+    line-height: normal;
+}
+
+.fas_read_more{
+    padding: 20px 0;
+    text-align: center;
+}
+
+.fas_read_more a {
+    color: var(--fas-font-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+}
+
+.fas_read_more a:hover{
+    color: var(--fas-primary-color);
+}
+
+.fas_read_more a img{
+    transition: var(--fas-transition);
+    transform: translateX(0);
+}
+
+.fas_read_more a:hover img{
+    transform: translateX(5px);
+}
+
+/********************************************************
+    Testimonials Section Style
+ *******************************************************/
+
+.fas_testi_heading {
+    text-align: center;
+    max-width: 700px;
+    margin: auto;
+}
+
+.fas_testi_heading h4 {
+    margin-bottom: 10px;
+}
+
+.fas_testi_thumb {
+    width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    margin: 0 auto -100px;
+    position: relative;
+    z-index: 1;
+}
+
+.fas_testi_thumb img{
+    min-height: 200px;
+    object-fit: cover;
+}
+
+.fas_testi_box {
+    border-radius: 10px;
+    box-shadow: 0 2px 1px 0.5px #0000000d;
+    background-color: var(--fas-primary-color);
+    padding: 120px 15px 20px;
+    text-align: center;
+    position: relative;
+}
+
+.fas_testi_text p{
+    color: var(--fas-white-color);
+    text-transform: capitalize;
+}
+
+.fas_testi_quotes {
+    max-height: 32px;
+    overflow: hidden;
+}
+
+.fas_testi_quotes img {
+    position: absolute;
+    top: -15px;
+    min-height: 32px;
+    object-fit: contain;
+}
+
+.fas_testi_quotes img:first-child {
+    left: 25px;
+}
+
+.fas_testi_quotes img:last-child{
+    right: 25px;
+}
+
+.fas_testi_slider .swiper-pagination {
+    position: relative;
+    top: unset;
+    right: unset;
+    bottom: unset;
+    margin-top: 30px;
+}
+
+/********************************************************
+    Contact Section Style
+ *******************************************************/
+
+.fas_contact_form h5, .fas_contact_add h5 {
+    margin-bottom: 30px;
+}
+
+.fas_contact_form .mt_popup_form_container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.fas_contact_form .mt_form_input,
+.fas_contact_form .mt_form_input label,
+.fas_contact_form .mt_form_input input,
+.fas_contact_form .mt_form_input textarea{
+    width: 100%;
+}
+
+.fas_contact_form .mt_form_input input,
+.fas_contact_form .mt_form_input textarea{
+    border: 1px solid #ebebeb;
+    height: 45px;
+    background-color: #ffffff;
+    padding: 0 10px;
+}
+
+.fas_contact_form .mt_form_input textarea {
+    height: 100px;
+    padding: 10px;
+    resize: none;
+}
+
+.fas_contact_btn {
+    margin-top: 15px;
+}
+
+.fas_address_area {
+    margin: 40px 0;
+}
+
+.fas_address_area li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0;
+    border-bottom: 1px solid #efefef;
+}
+
+.fas_address_area li:first-child{
+    padding-top: 0;
+}
+
+.fas_address_area li span {
+    width: 30px;
+    height: 30px;
+    background-color: var(--fas-primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.fas_address_area li a{
+    color: var(--fas-font-color);
+}
+
+.fas_contact_hours h6 {
+    margin-bottom: 5px;
+}
+
+/********************************************************
+    Footer Section Style
+ *******************************************************/
+
+.fas_footer_wrapper, .fas_copyright_wrapper{
+    background-color: var(--fas-primary-color);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.fas_newslatter_wrapper h4{
+    color: var(--fas-white-color);
+    line-height: 1.8;
+}
+
+.fas_footer_wrapper form label {
+    color: var(--fas-white-color);
+    margin: 0 0 10px 20px;
+}
+
+.fas_footer_wrapper .mt_form_input{
+    margin-bottom: 15px;
+}
+
+.fas_footer_wrapper .mt_form_input:last-child{
+    margin: 0;
+}
+
+.fas_footer_wrapper .mt_form_input input {
+    padding: 0px 135px 0 20px;
+    position: relative;
+    outline: none;
+    border: 1px solid rgb(255 255 255 / 10%);
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background-color: #ffffff;
+}
+
+.fas_newslatter {
+    position: relative;
+}
+
+.fas_newslatter button {
+    position: absolute;
+    top: 34px;
+    right: 3px;
+    min-height: 44px;
+    border-radius: 23px;
+}
+
+/********************************************************
+    Footer Section Style
+ *******************************************************/
+
+.fas_copyright_wrapper {
+    border-top: 2px solid rgb(235 235 235 / 40%);
+}
+
+.fas_copyright_info {
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.fas_copyright_info p {
+    color: #fff;
+    text-transform: capitalize;
+}
+
+.fas_copyright_info ul{
+    display: flex;
+}
+
+.fas_copyright_info ul li {
+    padding: 0 30px;
+    border-right: 2px solid #fff;
+}
+
+.fas_copyright_info ul li a{
+    color: #fff;
+}
+
+.fas_copyright_info ul li:first-child {
+    padding-left: 0;
+}
+
+.fas_copyright_info ul li:last-child{
+    border: none;
+}

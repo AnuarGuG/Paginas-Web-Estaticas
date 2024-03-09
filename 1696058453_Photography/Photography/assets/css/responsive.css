@@ -1,0 +1,98 @@
+
+/*============================
+Max - Width Query
+============================*/
+
+@media (max-width: 1700px){
+ 
+
+}
+
+@media (max-width:1499.98px){
+
+  
+}
+
+@media (max-width:1399.98px){
+
+	
+}
+
+@media (max-width:1199.98px){
+
+  
+}
+
+
+@media (max-width:991.98px){
+
+	.pxj_banner_content{
+		height: calc(70vh - 30px);
+	}   
+}
+
+@media (max-width:767.98px){
+
+	.pxj_portfolio_img img{
+		min-height: 345px;
+		max-height: 345px;
+	}
+
+	.pxj_input .mt_form_input{
+		min-width: 100%;
+	}
+	
+}
+
+@media (max-width:575.98px){
+
+	.pxj_banner_content {
+    	height: calc(60vh - 30px);
+	}
+
+	.pxj_banner_content h3 {
+	    font-size: 35px;
+	}
+
+	.pxj_banner_content p {
+	    font-size: 16px;
+	    letter-spacing: normal;
+	}
+
+	.pxj_client_img {
+    	width: 80px;
+    	height: 80px;
+    	min-width: 80px;
+	}
+
+	.pxj_client_img img{
+		min-height: 80px;
+	}
+
+	.pxj_testi_box{
+		margin-top: -20px;
+	}
+
+	.pxj_testi_text {
+	    margin-top: 20px;
+	}
+
+	.pxj_copyright_content{
+		justify-content: center;
+	}
+	
+	.pxj_copyright_content ul{
+		gap: 5px;
+	}
+
+	.pxj_copyright_content ul li {
+	    padding: 0 10px;
+	}
+
+}
+
+@media (max-width:349.98px){
+
+
+}
+

@@ -1,0 +1,38 @@
+
+
+body {
+	font-family: 'Spartan', sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: 'Spartan', sans-serif;
+	-webkit-transition: all 0.3s;
+	-moz-transition: all 0.3s;
+	-ms-transition: all 0.3s;
+	-o-transition: all 0.3s;
+	transition: all 0.3s;
+	margin: 0;
+	padding: 0;
+	word-break: break-word;
+}
+/* width */
+
+::-webkit-scrollbar {
+	width: 4px;
+}
+/* Track */
+
+::-webkit-scrollbar-track {
+	background: var(--sd-blue-color);
+}
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+	background: var(--orange-color-light);
+	width: 4px;
+}
+
